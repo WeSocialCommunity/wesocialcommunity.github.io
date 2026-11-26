@@ -725,3 +725,88 @@ p {
     padding: 75px 6%;
   }
 }
+/* =====================================
+   WE SOCIAL CLUB — SIGNATURE LOGO MOTION
+===================================== */
+
+.brand img,
+.site-logo,
+.footer-brand img {
+  display: block;
+  width: clamp(190px, 22vw, 290px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform-origin: center;
+  animation: logoArrival 5.8s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+/* Three-beat arrival, followed by a gentle hold */
+
+@keyframes logoArrival {
+  0% {
+    opacity: 0;
+    transform: scale(0.78);
+    filter: blur(8px);
+  }
+
+  9% {
+    opacity: 1;
+    transform: scale(0.88);
+    filter: blur(3px);
+  }
+
+  17% {
+    transform: scale(1.08);
+    filter: blur(0);
+  }
+
+  23% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.04);
+  }
+
+  36% {
+    transform: scale(1);
+  }
+
+  43% {
+    transform: scale(1.025);
+  }
+
+  49% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  88% {
+    transform: scale(1.035);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.78);
+    filter: blur(8px);
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .brand img,
+  .site-logo,
+  .footer-brand img {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
