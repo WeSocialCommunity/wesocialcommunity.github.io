@@ -1,141 +1,377 @@
-?variant="standard" title="community.html" id="58321"}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the people, connections and shared experiences that make WE Social Club a community.">
-  <title>Our Community | WE SOCIAL CLUB</title>
+
+  <title>Our Community — WE SOCIAL CLUB</title>
+  <meta name="description" content="Meet the people and discover the spirit behind We Social Club. A community built around connection, shared experiences and genuine belonging.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
+<div class="grain-overlay"></div>
+
 <header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="assets/logo.png" alt="WE Social Club logo">
+  <a href="index.html" class="brand" aria-label="We Social Club homepage">
+    <img src="assets/logo.png" alt="WE SOCIAL CLUB">
   </a>
 
-  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">Our Story</a>
     <a href="community.html" class="active">Community</a>
     <a href="experiences.html">Experiences</a>
     <a href="gallery.html">Gallery</a>
-    <a href="join.html" class="nav-join">Join Us</a>
+    <a href="join.html" class="nav-join">Join Us <span>↗</span></a>
   </nav>
 </header>
 
+
 <main>
 
-<section class="page-hero">
-  <p class="eyebrow">THE PEOPLE MAKE THE PLACE</p>
-  <h1>YOU DON'T HAVE TO DO LIFE ALONE.</h1>
-  <p>
-    Different stories. Different backgrounds. Different journeys.
-    One community where people can find connection, friendship
-    and a genuine sense of belonging.
-  </p>
-</section>
+  <!-- INTRO -->
+  <section class="page-hero section-padding">
 
-<section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">MORE THAN MEETING PEOPLE</p>
-    <h2>We come as we are.</h2>
-  </div>
+    <p class="eyebrow">01 — THE PEOPLE MAKE THE PLACE</p>
 
-  <div class="text-panel">
+    <h1>
+      A community isn't<br>
+      a building.<br>
+      It's the people<br>
+      who make it <em>home.</em>
+    </h1>
+
     <p>
-      Some people arrive carrying stories they rarely talk about.
-      Others come looking for friendship, fresh energy or simply
-      something meaningful to do with their Sundays.
+      We Social Club brings people together around something
+      simple but powerful: the need to connect, belong and
+      experience life with others.
     </p>
+
+  </section>
+
+
+  <!-- COMMUNITY FILM -->
+  <section class="content-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">02 — THIS IS WHAT TOGETHER LOOKS LIKE</p>
+        <h2>Real people. <em>Real moments.</em></h2>
+      </div>
+
+      <p>
+        No scripts. No performances. Just people sharing
+        time, conversations and experiences.
+      </p>
+    </div>
+
+    <div class="community-feature-video">
+
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/sit.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">WE / TOGETHER</span>
+        <p>THERE IS ROOM FOR EVERY STORY.</p>
+      </div>
+
+      <div class="feature-video-overlay">
+        <span>THE HEART OF THE CLUB</span>
+        <h3>Sometimes showing up<br>is everything.</h3>
+      </div>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHO WE ARE -->
+  <section class="content-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">03 — WHO WE ARE</p>
+        <h2>Different lives. <em>Shared humanity.</em></h2>
+      </div>
+    </div>
+
+    <div class="text-panel">
+
+      <p class="large-copy">
+        We are people from different backgrounds, professions,
+        experiences and walks of life. We don't have to be
+        the same to find common ground.
+      </p>
+
+      <p>
+        Some members arrive knowing people. Others arrive
+        knowing nobody. Some are naturally outgoing. Others
+        take time to open up. There is space for all of them.
+      </p>
+
+      <p>
+        We want the person who has had a difficult week to feel
+        welcome. We want the person looking for new friendships
+        to find them. We want people to discover that connection
+        can happen in the most ordinary moments.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT WE DO -->
+  <section class="community-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">04 — HOW WE CONNECT</p>
+        <h2>Many ways to <em>belong.</em></h2>
+      </div>
+
+      <p>
+        Community is not one activity. It is everything
+        that happens when people make time for one another.
+      </p>
+    </div>
+
+    <div class="community-grid">
+
+      <article class="community-card card-dark">
+        <span class="card-number">01 / CONVERSATION</span>
+
+        <div class="card-card-copy">
+          <h3>Talk.<br>Listen.<br>Understand.</h3>
+
+          <p>
+            Conversations that give people room to speak,
+            listen and see life from another perspective.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="community-card card-paper">
+        <span class="card-number">02 / SHARED EXPERIENCES</span>
+
+        <div class="card-card-copy">
+          <h3>Make<br>memories<br>together.</h3>
+
+          <p>
+            Games, celebrations, movie nights, outdoor activities
+            and unexpected adventures.
+          </p>
+        </div>
+      </article>
+
+
+      <article class="community-card card-dark">
+        <span class="card-number">03 / SUPPORT</span>
+
+        <div class="card-card-copy">
+          <h3>Show up<br>for one<br>another.</h3>
+
+          <p>
+            Sometimes support begins with a simple message,
+            a shared laugh or someone choosing to be present.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- OUR VALUES -->
+  <section class="dark-section section-padding">
+
+    <p class="eyebrow">05 — THE THINGS WE PROTECT</p>
+
+    <h2>
+      Good people.<br>
+      Genuine <em>belonging.</em>
+    </h2>
+
+    <div class="feature-grid">
+
+      <article class="feature-card">
+        <span>01</span>
+        <h3>Respect</h3>
+        <p>
+          Every person deserves to be treated with dignity,
+          regardless of their background or circumstances.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <span>02</span>
+        <h3>No judgement</h3>
+        <p>
+          We make room for people to be themselves without
+          pressure to explain or impress.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <span>03</span>
+        <h3>Participation</h3>
+        <p>
+          Everyone has something to contribute, whether
+          through a skill, an idea, a story or simply showing up.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <span>04</span>
+        <h3>Genuine connection</h3>
+        <p>
+          We value real relationships over appearances,
+          numbers or social status.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- WEEKLY MEETINGS -->
+  <section class="weekly-section section-padding">
+
+    <div class="weekly-left">
+
+      <p class="eyebrow">06 — OUR REGULAR MEETUP</p>
+
+      <h2>
+        Sundays are<br>
+        for <em>connection.</em>
+      </h2>
+
+      <p>
+        Our regular meetups give us time to catch up, meet
+        new people, share experiences and recharge together.
+      </p>
+
+      <a href="join.html" class="button button-dark">
+        JOIN THE COMMUNITY <span>↗</span>
+      </a>
+
+    </div>
+
+    <div class="weekly-right">
+
+      <div class="weekly-detail">
+        <span>DAY</span>
+        <strong>SUNDAY</strong>
+      </div>
+
+      <div class="weekly-detail">
+        <span>STARTING</span>
+        <strong>3:30 PM</strong>
+      </div>
+
+      <div class="weekly-detail">
+        <span>ENDING</span>
+        <strong>WHEN WE'RE TIRED.</strong>
+      </div>
+
+      <div class="weekly-note">
+        <span>COME AS YOU ARE.</span>
+        <p>
+          You don't need to know anyone beforehand.
+          There is always room to meet someone new.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOIN -->
+  <section class="closing-section section-padding">
+
+    <p class="eyebrow">07 — YOUR PEOPLE ARE OUT THERE</p>
+
+    <h2>
+      There is room<br>
+      for <em>one more.</em>
+    </h2>
+
     <p>
-      At WE Social Club, nobody has to perform happiness.
-      You can participate, listen, laugh, share or simply take
-      your time getting comfortable.
+      Whether you come with friends or arrive on your own,
+      we'd love to meet you.
     </p>
-    <p>
-      We are not here to judge one another. We are here to build
-      something genuine, one experience and one friendship at a time.
-    </p>
-  </div>
-</section>
 
-<section class="community-feature">
-  <div class="community-feature-copy">
-    <p class="eyebrow">OUR KIND OF CONNECTION</p>
-    <h2>Sometimes the best therapy is a good Sunday with good people.</h2>
-    <p>
-      We call it recharging. A chance to step away from the weight
-      of the week, meet people, share experiences and remember
-      that life still has beautiful moments waiting for us.
-    </p>
-  </div>
+    <a href="join.html" class="button button-dark">
+      BECOME PART OF THE CLUB <span>↗</span>
+    </a>
 
-  <div class="community-feature-video">
-    <video autoplay muted loop playsinline>
-      <source src="assets/videos/sit.mp4" type="video/mp4">
-    </video>
-    <button class="sound-toggle" type="button">Sound on</button>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">WHAT BRINGS US TOGETHER</p>
-    <h2>Different reasons. One place.</h2>
-  </div>
-
-  <div class="feature-grid">
-
-    <article class="feature-card">
-      <h3>Friendship</h3>
-      <p>Meeting people who can become part of your everyday story.</p>
-    </article>
-
-    <article class="feature-card">
-      <h3>Shared experiences</h3>
-      <p>Creating memories through games, conversations, music and adventures.</p>
-    </article>
-
-    <article class="feature-card">
-      <h3>Being heard</h3>
-      <p>Having space to talk, listen and connect without fear of judgement.</p>
-    </article>
-
-    <article class="feature-card">
-      <h3>Belonging</h3>
-      <p>Knowing there is a place where your presence matters.</p>
-    </article>
-
-  </div>
-</section>
-
-<section class="content-section dark-section">
-  <p class="eyebrow">A COMMUNITY THAT SHOWS UP</p>
-  <h2>We notice when someone is missing.</h2>
-  <p>
-    Community is not just about the days we meet. It is about
-    the relationships we build and the care we extend beyond
-    a single gathering.
-  </p>
-</section>
-
-<section class="closing-section">
-  <h2>Your story belongs here, too.</h2>
-  <a href="join.html" class="button button-dark">FIND YOUR PEOPLE</a>
-</section>
+  </section>
 
 </main>
 
+
 <footer class="site-footer">
-  <img src="assets/logo.png" alt="WE Social Club logo">
-  <p>Good people. Great experiences. Genuine belonging & v!bes.</p>
-  <p>© <span class="current-year"></span> WE SOCIAL CLUB</p>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="WE SOCIAL CLUB">
+      </a>
+
+      <p>
+        Good people. Great experiences.<br>
+        Genuine belonging &amp; v!bes.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+        <span>EXPLORE</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div>
+        <span>GET INVOLVED</span>
+        <a href="join.html">Join the Club</a>
+        <a href="join.html">Get in Touch</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+    <span>MADE FOR PEOPLE. BY PEOPLE.</span>
+    <a href="index.html">BACK HOME ↑</a>
+  </div>
+
 </footer>
 
 </body>
