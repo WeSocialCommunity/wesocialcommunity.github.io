@@ -1,261 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="WE Social Club — Good people, great experiences and genuine belonging. A community built around connection, friendship and shared experiences.">
-
-    <meta name="theme-color" content="#e9e5d9">
-
     <title>WE Social Club | Good People. Great Experiences.</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A community built around genuine belonging, good people, great experiences and positive connections.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- PAPER TEXTURE -->
-    <div class="paper-texture"></div>
+    <div class="paper-grain"></div>
 
+    <!-- HEADER -->
 
-    <!-- =================================
-         HEADER
-    ================================== -->
+    <header class="site-header">
 
-    <header class="header">
-
-        <a href="#home" class="header-logo">
-            <img src="WE_Social_Club_final.png"
-                 alt="WE Social Club">
+        <a href="#home" class="brand">
+            <img src="WE_Social_Club_final.png" alt="WE Social Club Logo">
         </a>
 
-        <button class="menu-button"
-                id="menuButton"
-                aria-label="Open navigation"
-                aria-expanded="false">
-
+        <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
             <span></span>
             <span></span>
-            <span></span>
-
         </button>
 
-        <nav class="main-navigation" id="mainNavigation">
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About us</a>
-
-            <a href="#community">Our community</a>
-
-            <a href="#experiences">Experiences</a>
-
-            <a href="#gallery">Gallery</a>
-
-            <a href="#join" class="navigation-join">
-                Join the club <span>↗</span>
-            </a>
-
+        <nav class="navigation" id="mainNavigation">
+            <a href="#about">ABOUT</a>
+            <a href="#community">COMMUNITY</a>
+            <a href="#experiences">EXPERIENCES</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#join" class="nav-join">JOIN US <span>↗</span></a>
         </nav>
 
     </header>
 
 
-
     <main>
 
+        <!-- HERO -->
 
-        <!-- =================================
-             HOME / HERO
-        ================================== -->
+        <section class="hero section-wrap" id="home">
 
-        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">A DIFFERENT KIND OF COMMUNITY — EST. WITH PURPOSE</p>
 
-            <div class="hero-topline">
+                <h1>
+                    Good people.<br>
+                    Great experiences.<br>
+                    <span>Genuine belonging.</span>
+                </h1>
 
-                <span>GOOD PEOPLE</span>
-
-                <span>GREAT EXPERIENCES</span>
-
-                <span>GENUINE BELONGING</span>
-
-            </div>
-
-
-            <div class="hero-brand">
-
-                <div class="hero-logo-wrap">
-
-                    <img
-                        src="WE_Social_Club_final.png"
-                        alt="WE Social Club"
-                        class="hero-logo">
-
-                </div>
-
-                <p class="brand-description">
-                    A COMMUNITY BUILT AROUND PEOPLE,
-                    CONNECTION AND THE EXPERIENCES
-                    THAT MAKE LIFE WORTH SHARING.
+                <p class="hero-description">
+                    A place to connect, unwind, experience life and find
+                    your people. No pressure. No judgement. Just genuine
+                    connections and good energy.
                 </p>
 
-            </div>
-
-
-            <div class="hero-main">
-
-                <div class="hero-title-area">
-
-                    <span class="section-number">
-                        001 — THE COMMUNITY
-                    </span>
-
-                    <h1>
-                        GOOD PEOPLE.
-                        <span>GREAT <em>V!BES.</em></span>
-                    </h1>
-
-                    <p class="hero-description">
-
-                        Life is not meant to be experienced
-                        alone. We bring people together through
-                        friendship, shared experiences,
-                        meaningful conversations and genuine
-                        human connection.
-
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="#join" class="button button-dark">
-                            FIND YOUR PEOPLE <span>↗</span>
-                        </a>
-
-                        <a href="#about" class="simple-link">
-                            GET TO KNOW US
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-image-area">
-
-                    <figure class="hero-image">
-
-                        <img src="com1.jpeg"
-                             alt="Members of We Social Club">
-
-                        <figcaption>
-                            <span>WE ARE BETTER TOGETHER.</span>
-                            <span>01 / 03</span>
-                        </figcaption>
-
-                    </figure>
-
-                    <div class="hero-side-note">
-
-                        <span class="small-label">
-                            OUR PHILOSOPHY
-                        </span>
-
-                        <p>
-                            Good people.
-                            Good energy.
-                            <em>Real connections.</em>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="hero-bottomline">
-
-                <span>COME AS YOU ARE.</span>
-
-                <span>THERE IS ROOM FOR YOU HERE.</span>
-
-                <a href="#community">DISCOVER THE COMMUNITY ↓</a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             INTRODUCTION
-        ================================== -->
-
-        <section class="introduction section-padding" id="about">
-
-            <div class="section-label">
-                <span>002 — WHO WE ARE</span>
-                <span>THE IDEA BEHIND WE</span>
-            </div>
-
-
-            <div class="introduction-grid">
-
-                <div class="introduction-side">
-
-                    <span class="vertical-note">
-                        NOT JUST ANOTHER SOCIAL CLUB.
-                    </span>
-
-                </div>
-
-
-                <div class="introduction-content">
-
-                    <h2>
-                        More than a club.
-                        <em>A place to belong.</em>
-                    </h2>
-
-                    <p class="large-paragraph">
-
-                        WE Social Club is a community that
-                        believes life becomes better when
-                        people find meaningful connections.
-
-                    </p>
-
-                    <p>
-
-                        We create opportunities for people
-                        to meet, interact, build friendships
-                        and experience life together.
-
-                        Through gatherings, conversations,
-                        entertainment, outdoor activities
-                        and shared moments, we bring people
-                        closer in an increasingly disconnected
-                        world.
-
-                    </p>
-
-                    <p>
-
-                        We believe nobody should have to
-                        pretend to be someone else to feel
-                        accepted. You can come as you are,
-                        participate at your own pace and
-                        find people who make you feel welcome.
-
-                    </p>
-
-                    <a href="#community" class="text-link">
-                        MORE ABOUT OUR COMMUNITY ↗
+                <div class="hero-actions">
+                    <a href="#join" class="button button-primary">
+                        BE PART OF IT <span>↗</span>
                     </a>
 
+                    <a href="#about" class="text-link">
+                        GET TO KNOW US <span>↓</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-logo-frame">
+                    <img src="WE_Social_Club_final.png" alt="WE Social Club" class="hero-logo">
+                </div>
+
+                <div class="hero-stamp">
+                    <span>GOOD PEOPLE</span>
+                    <span>GREAT EXPERIENCES</span>
+                    <span>GENUINE BELONGING</span>
+                </div>
+
+                <span class="hero-number">001 / WE</span>
+            </div>
+
+            <div class="hero-bottom">
+                <span>COMMUNITY • CONNECTION • EXPERIENCE</span>
+                <span>SCROLL TO EXPLORE ↓</span>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="section-wrap about-section" id="about">
+
+            <div class="section-heading">
+                <span class="section-index">01 / WHO WE ARE</span>
+                <span class="section-line"></span>
+                <span class="section-tag">THE IDEA</span>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-title">
+                    <p class="eyebrow">MORE THAN JUST A CLUB</p>
+
+                    <h2>
+                        We are here<br>
+                        for the <em>human</em><br>
+                        experience.
+                    </h2>
+                </div>
+
+                <div class="about-content">
+                    <p class="large-copy">
+                        Life is better when you don't have to experience
+                        everything alone.
+                    </p>
+
+                    <p>
+                        WE Social Club is a community created to bring
+                        people together through meaningful connections,
+                        shared experiences and genuine belonging.
+                    </p>
+
+                    <p>
+                        We believe everyone deserves a place where they
+                        can show up as themselves, meet good people,
+                        discover new experiences and feel part of
+                        something.
+                    </p>
+
+                    <a href="#community" class="inline-link">
+                        DISCOVER OUR PURPOSE ↗
+                    </a>
                 </div>
 
             </div>
@@ -263,757 +149,62 @@
         </section>
 
 
+        <!-- COMMUNITY -->
 
-        <!-- =================================
-             OUR PURPOSE
-        ================================== -->
+        <section class="community-section section-wrap" id="community">
 
-        <section class="purpose-section section-padding">
-
-            <div class="section-label">
-                <span>003 — WHY WE EXIST</span>
-                <span>OUR PURPOSE</span>
+            <div class="section-heading">
+                <span class="section-index">02 / OUR COMMUNITY</span>
+                <span class="section-line"></span>
+                <span class="section-tag">BELONGING MATTERS</span>
             </div>
-
-
-            <div class="purpose-heading">
-
-                <h2>
-                    Connection is not
-                    a luxury. It is
-                    <em>human.</em>
-                </h2>
-
-                <p>
-
-                    We recognise the importance of
-                    belonging, friendship and having
-                    people around us.
-
-                </p>
-
-            </div>
-
-
-            <div class="purpose-grid">
-
-                <article class="purpose-card">
-
-                    <span class="card-number">01</span>
-
-                    <h3>Connection</h3>
-
-                    <p>
-
-                        Creating opportunities for people
-                        to meet, interact and form genuine
-                        relationships.
-
-                    </p>
-
-                </article>
-
-
-                <article class="purpose-card">
-
-                    <span class="card-number">02</span>
-
-                    <h3>Belonging</h3>
-
-                    <p>
-
-                        Building a welcoming environment
-                        where people feel included,
-                        appreciated and accepted.
-
-                    </p>
-
-                </article>
-
-
-                <article class="purpose-card">
-
-                    <span class="card-number">03</span>
-
-                    <h3>Anti-trauma</h3>
-
-                    <p>
-
-                        Promoting positive social experiences,
-                        human connection and supportive
-                        spaces that help people navigate
-                        life's difficult moments.
-
-                    </p>
-
-                </article>
-
-
-                <article class="purpose-card">
-
-                    <span class="card-number">04</span>
-
-                    <h3>Experience</h3>
-
-                    <p>
-
-                        Making room for adventure,
-                        entertainment, laughter,
-                        discovery and memories.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             COMMUNITY
-        ================================== -->
-
-        <section class="community-section section-padding"
-                 id="community">
-
-            <div class="section-label">
-                <span>004 — THE PEOPLE</span>
-                <span>OUR COMMUNITY</span>
-            </div>
-
 
             <div class="community-grid">
 
-                <div class="community-image">
+                <div class="community-card community-main">
+                    <span class="card-number">01</span>
 
-                    <img src="com2.jpeg"
-                         alt="We Social Club community gathering">
-
-                    <span class="image-index">THE PEOPLE / 02</span>
-
-                </div>
-
-
-                <div class="community-content">
+                    <p class="eyebrow">OUR BELIEF</p>
 
                     <h2>
-                        Find your people.
-                        <em>Find your place.</em>
-                    </h2>
-
-                    <p>
-
-                        Our community brings together people
-                        with different backgrounds, interests,
-                        personalities and stories.
-
-                    </p>
-
-                    <p>
-
-                        Some come to make friends.
-                        Some come to try something new.
-                        Some simply want somewhere to spend
-                        a good afternoon with good people.
-
-                    </p>
-
-                    <p>
-
-                        Whatever brings you here, you are
-                        welcome.
-
-                    </p>
-
-
-                    <div class="community-values">
-
-                        <div>
-                            <strong>01.</strong>
-                            <span>FREE TO JOIN</span>
-                        </div>
-
-                        <div>
-                            <strong>02.</strong>
-                            <span>NO JUDGEMENT</span>
-                        </div>
-
-                        <div>
-                            <strong>03.</strong>
-                            <span>GENUINE BELONGING</span>
-                        </div>
-
-                    </div>
-
-
-                    <a href="#join" class="button button-dark">
-                        BECOME PART OF US ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             EXPERIENCES
-        ================================== -->
-
-        <section class="experiences-section section-padding"
-                 id="experiences">
-
-            <div class="section-label">
-                <span>005 — LIFE OUTSIDE ROUTINE</span>
-                <span>WHAT WE GET UP TO</span>
-            </div>
-
-
-            <div class="experiences-heading">
-
-                <h2>
-                    Great experiences.
-                    <em>Better memories.</em>
-                </h2>
-
-                <p>
-
-                    We believe the best moments are often
-                    the ones we share with other people.
-
-                </p>
-
-            </div>
-
-
-            <div class="experiences-grid">
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 01
-                    </div>
-
-                    <h3>Social gatherings</h3>
-
-                    <p>
-
-                        Meet new people, catch up with
-                        friends, have conversations and
-                        enjoy the company around you.
-
-                    </p>
-
-                </article>
-
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 02
-                    </div>
-
-                    <h3>Outdoor adventures</h3>
-
-                    <p>
-
-                        Get outside, discover places,
-                        enjoy activities and experience
-                        something different.
-
-                    </p>
-
-                </article>
-
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 03
-                    </div>
-
-                    <h3>Movie nights</h3>
-
-                    <p>
-
-                        Good films, popcorn, comfortable
-                        spaces and people to share the
-                        experience with.
-
-                    </p>
-
-                </article>
-
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 04
-                    </div>
-
-                    <h3>Games & challenges</h3>
-
-                    <p>
-
-                        Friendly competition, teamwork,
-                        laughter and the occasional
-                        unexpected winner.
-
-                    </p>
-
-                </article>
-
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 05
-                    </div>
-
-                    <h3>Celebrations</h3>
-
-                    <p>
-
-                        Birthdays, milestones and the
-                        little things that deserve
-                        to be celebrated together.
-
-                    </p>
-
-                </article>
-
-
-                <article class="experience-card">
-
-                    <div class="experience-number">
-                        EXPERIENCE 06
-                    </div>
-
-                    <h3>Online connection</h3>
-
-                    <p>
-
-                        Stay connected, participate
-                        in conversations and share
-                        experiences even when meeting
-                        physically is not possible.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             WHEN WE MEET
-        ================================== -->
-
-        <section class="meetup-section">
-
-            <div class="meetup-inner">
-
-                <div class="section-label">
-                    <span>006 — THE REGULAR MEETUP</span>
-                    <span>MAKE SOME TIME FOR PEOPLE</span>
-                </div>
-
-
-                <div class="meetup-content">
-
-                    <div>
-
-                        <span class="small-label">
-                            SUNDAY IS OUR DAY
-                        </span>
-
-                        <h2>
-                            Sundays
-                            <em>together.</em>
-                        </h2>
-
-                    </div>
-
-
-                    <div class="meetup-details">
-
-                        <div class="meetup-time">
-                            <strong>3:30 PM</strong>
-                            <span>UNTIL WE ARE TIRED.</span>
-                        </div>
-
-                        <p>
-
-                            Our regular gatherings are a
-                            chance to connect, relax,
-                            participate and enjoy the
-                            company of good people.
-
-                        </p>
-
-                        <p>
-
-                            Some activities and conversations
-                            also happen online.
-
-                        </p>
-
-                        <a href="#join" class="button button-light">
-                            COME HANG OUT ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             GALLERY
-        ================================== -->
-
-        <section class="gallery-section section-padding"
-                 id="gallery">
-
-            <div class="section-label">
-                <span>007 — THE MEMORIES</span>
-                <span>OUR WORLD IN PICTURES</span>
-            </div>
-
-
-            <div class="gallery-heading">
-
-                <h2>
-                    Moments worth
-                    <em>keeping.</em>
-                </h2>
-
-                <p>
-
-                    A little look into the people,
-                    gatherings and experiences
-                    that make WE Social Club.
-
-                </p>
-
-            </div>
-
-
-            <div class="gallery-grid">
-
-                <figure class="gallery-item gallery-large">
-
-                    <img src="com1.jpeg"
-                         alt="We Social Club members">
-
-                    <figcaption>
-                        GOOD PEOPLE. GOOD TIMES.
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-item">
-
-                    <img src="com2.jpeg"
-                         alt="We Social Club experience">
-
-                    <figcaption>
-                        EXPERIENCES WE SHARE.
-                    </figcaption>
-
-                </figure>
-
-
-                <figure class="gallery-item">
-
-                    <img src="com3.jpeg"
-                         alt="We Social Club gathering">
-
-                    <figcaption>
-                        MEMORIES WE KEEP.
-                    </figcaption>
-
-                </figure>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================
-             JOIN US
-        ================================== -->
-
-        <section class="join-section section-padding"
-                 id="join">
-
-            <div class="section-label">
-                <span>008 — YOUR INVITATION</span>
-                <span>YOU BELONG HERE</span>
-            </div>
-
-
-            <div class="join-grid">
-
-                <div class="join-message">
-
-                    <h2>
-                        You don't have
-                        to do life
+                        Nobody should<br>
+                        have to feel<br>
                         <em>alone.</em>
                     </h2>
 
                     <p>
-
-                        There are good people you haven't
-                        met yet, conversations you haven't
-                        had and experiences waiting to happen.
-
+                        We create opportunities for people to meet,
+                        connect, share stories and build relationships
+                        that extend beyond a single event.
                     </p>
-
-                    <p>
-
-                        Take the first step.
-                        Tell us a little about yourself
-                        and become part of the community.
-
-                    </p>
-
-                    <div class="join-highlight">
-
-                        <strong>FREE MEMBERSHIP</strong>
-
-                        <span>
-                            GOOD PEOPLE. GREAT EXPERIENCES.
-                            GENUINE BELONGING.
-                        </span>
-
-                    </div>
-
                 </div>
 
+                <div class="community-side">
 
-                <div class="registration-area">
+                    <div class="community-card dark-card">
+                        <span class="card-number">02</span>
+                        <p class="eyebrow">OUR APPROACH</p>
 
-                    <div class="registration-heading">
-
-                        <span class="small-label">
-                            MEMBERSHIP APPLICATION
-                        </span>
-
-                        <h3>
-                            Let's get to
-                            <em>know you.</em>
-                        </h3>
+                        <h3>Anti-trauma.<br>Pro-connection.</h3>
 
                         <p>
-                            A few details to help us welcome you.
+                            We believe in creating positive spaces that
+                            encourage openness, connection and healthier
+                            social experiences.
                         </p>
-
                     </div>
 
+                    <div class="community-card red-card">
+                        <span class="card-number">03</span>
+                        <p class="eyebrow">OUR PROMISE</p>
 
-                    <!-- THE JAVASCRIPT WILL POWER THIS FORM -->
+                        <h3>Come as you are.</h3>
 
-                    <form id="membershipForm">
-
-                        <div class="form-progress">
-
-                            <span id="stepLabel">
-                                STEP 01 OF 07
-                            </span>
-
-                            <span>YOUR INTRODUCTION</span>
-
-                        </div>
-
-
-                        <div class="progress-track">
-                            <div id="progressFill"></div>
-                        </div>
-
-
-                        <div class="form-step active">
-
-                            <label for="name">
-                                What is your full name?
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Your name"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="age">
-                                How old are you?
-                            </label>
-
-                            <input
-                                type="number"
-                                id="age"
-                                name="age"
-                                min="18"
-                                placeholder="Your age"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="location">
-                                Where are you based?
-                            </label>
-
-                            <input
-                                type="text"
-                                id="location"
-                                name="location"
-                                placeholder="Your town or district"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="about">
-                                Tell us a little about yourself.
-                            </label>
-
-                            <textarea
-                                id="about"
-                                name="about"
-                                placeholder="Who are you?"
-                                required></textarea>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="interests">
-                                What are your interests?
-                            </label>
-
-                            <textarea
-                                id="interests"
-                                name="interests"
-                                placeholder="What do you enjoy?"
-                                required></textarea>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="skills">
-                                What skills or talents would you like to share?
-                            </label>
-
-                            <textarea
-                                id="skills"
-                                name="skills"
-                                placeholder="Tell us about your skills and talents"></textarea>
-
-                        </div>
-
-
-                        <div class="form-step">
-
-                            <label for="participation">
-                                How would you like to participate?
-                            </label>
-
-                            <select
-                                id="participation"
-                                name="participation"
-                                required>
-
-                                <option value="">
-                                    Select an option
-                                </option>
-
-                                <option value="Physical meetups">
-                                    Physical meetups
-                                </option>
-
-                                <option value="Online activities">
-                                    Online activities
-                                </option>
-
-                                <option value="Both">
-                                    Both
-                                </option>
-
-                            </select>
-
-
-                            <label for="whatsapp">
-                                Your WhatsApp number
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="whatsapp"
-                                name="whatsapp"
-                                placeholder="+256..."
-                                required>
-
-
-                            <label for="extra">
-                                Anything else you want us to know?
-                            </label>
-
-                            <textarea
-                                id="extra"
-                                name="extra"
-                                placeholder="Optional"></textarea>
-
-                        </div>
-
-
-                        <div class="form-buttons">
-
-                            <button
-                                type="button"
-                                id="backButton">
-                                ← BACK
-                            </button>
-
-                            <button
-                                type="button"
-                                id="nextButton">
-                                CONTINUE →
-                            </button>
-
-                        </div>
-
-
-                        <p id="formMessage"
-                           class="form-message"></p>
-
-                    </form>
+                        <p>
+                            Free to be yourself. Free to connect.
+                            Free to belong.
+                        </p>
+                    </div>
 
                 </div>
 
@@ -1022,119 +213,402 @@
         </section>
 
 
+        <!-- EXPERIENCES -->
 
-        <!-- =================================
-             FINAL INVITATION
-        ================================== -->
+        <section class="section-wrap experiences-section" id="experiences">
 
-        <section class="final-invitation">
+            <div class="section-heading">
+                <span class="section-index">03 / WHAT WE DO</span>
+                <span class="section-line"></span>
+                <span class="section-tag">LIFE HAPPENS HERE</span>
+            </div>
 
-            <div class="final-invitation-inner">
-
-                <span class="small-label">
-                    THIS IS YOUR SPACE.
-                </span>
-
+            <div class="experiences-intro">
                 <h2>
-                    GOOD PEOPLE.
-                    <em>GREAT EXPERIENCES.</em>
+                    Not just another<br>
+                    <em>meet-up.</em>
                 </h2>
 
-                <a href="#join" class="button button-light">
-                    JOIN WE SOCIAL CLUB ↗
-                </a>
+                <p>
+                    We create experiences that bring people closer.
+                    Sometimes adventurous, sometimes relaxed,
+                    sometimes completely unexpected.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+
+                <article class="experience-card">
+                    <span class="experience-number">01</span>
+                    <div class="experience-symbol">✳</div>
+                    <h3>Social Gatherings</h3>
+                    <p>
+                        Meet new people, catch up, laugh and enjoy
+                        the simple pleasure of being together.
+                    </p>
+                    <span class="card-bottom">CONNECTION FIRST ↗</span>
+                </article>
+
+                <article class="experience-card">
+                    <span class="experience-number">02</span>
+                    <div class="experience-symbol">◉</div>
+                    <h3>Outdoor Experiences</h3>
+                    <p>
+                        Get outside, discover new places and create
+                        memories beyond the everyday routine.
+                    </p>
+                    <span class="card-bottom">GET OUT THERE ↗</span>
+                </article>
+
+                <article class="experience-card">
+                    <span class="experience-number">03</span>
+                    <div class="experience-symbol">▧</div>
+                    <h3>Movie Nights</h3>
+                    <p>
+                        Films, popcorn, conversations and the kind
+                        of evenings you wish could last longer.
+                    </p>
+                    <span class="card-bottom">PRESS PLAY ↗</span>
+                </article>
+
+                <article class="experience-card">
+                    <span class="experience-number">04</span>
+                    <div class="experience-symbol">⌁</div>
+                    <h3>Games & Activities</h3>
+                    <p>
+                        Friendly competition, teamwork, laughter
+                        and moments worth remembering.
+                    </p>
+                    <span class="card-bottom">LET'S PLAY ↗</span>
+                </article>
+
+                <article class="experience-card">
+                    <span class="experience-number">05</span>
+                    <div class="experience-symbol">✺</div>
+                    <h3>Conversations</h3>
+                    <p>
+                        Real conversations, new perspectives and
+                        the freedom to connect without judgement.
+                    </p>
+                    <span class="card-bottom">LET'S TALK ↗</span>
+                </article>
+
+                <article class="experience-card">
+                    <span class="experience-number">06</span>
+                    <div class="experience-symbol">✧</div>
+                    <h3>Surprises & More</h3>
+                    <p>
+                        Unexpected adventures, special moments
+                        and experiences we create together.
+                    </p>
+                    <span class="card-bottom">EXPECT MORE ↗</span>
+                </article>
 
             </div>
 
         </section>
 
+
+        <!-- MEETUP -->
+
+        <section class="meetup-section section-wrap" id="meetup">
+
+            <div class="meetup-inner">
+
+                <div>
+                    <p class="eyebrow">THE WEEKLY RITUAL</p>
+
+                    <h2>
+                        Sundays are<br>
+                        for <em>us.</em>
+                    </h2>
+
+                    <p>
+                        Our regular meet-ups are an opportunity to
+                        disconnect from the routine, meet people and
+                        enjoy good company.
+                    </p>
+                </div>
+
+                <div class="meetup-details">
+                    <div class="meetup-detail">
+                        <span>WHEN</span>
+                        <strong>EVERY SUNDAY</strong>
+                    </div>
+
+                    <div class="meetup-detail">
+                        <span>TIME</span>
+                        <strong>FROM 3:30 PM</strong>
+                    </div>
+
+                    <div class="meetup-detail">
+                        <span>THE PLAN</span>
+                        <strong>GOOD PEOPLE. GOOD V!BES.</strong>
+                    </div>
+
+                    <a href="#join" class="button button-light">
+                        JOIN THE NEXT MEET-UP ↗
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section class="section-wrap gallery-section" id="gallery">
+
+            <div class="section-heading">
+                <span class="section-index">04 / THE MEMORIES</span>
+                <span class="section-line"></span>
+                <span class="section-tag">A LITTLE LOOK INSIDE</span>
+            </div>
+
+            <div class="gallery-heading">
+                <h2>
+                    Moments that<br>
+                    <em>bring us together.</em>
+                </h2>
+
+                <p>
+                    A collection of people, places, laughter
+                    and experiences.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-item gallery-large">
+                    <img src="com1.jpeg" alt="WE Social Club community gathering">
+                    <figcaption>01 — THE PEOPLE</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="com2.jpeg" alt="WE Social Club experience">
+                    <figcaption>02 — THE EXPERIENCES</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="com3.jpeg" alt="WE Social Club community moments">
+                    <figcaption>03 — THE MEMORIES</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOIN -->
+
+        <section class="join-section section-wrap" id="join">
+
+            <div class="section-heading">
+                <span class="section-index">05 / YOUR TURN</span>
+                <span class="section-line"></span>
+                <span class="section-tag">COME BE PART OF IT</span>
+            </div>
+
+            <div class="join-intro">
+                <p class="eyebrow">THERE'S ROOM FOR YOU</p>
+
+                <h2>
+                    Your people<br>
+                    might be <em>here.</em>
+                </h2>
+
+                <p>
+                    Interested in being part of WE Social Club?
+                    Tell us a little about yourself.
+                </p>
+            </div>
+
+            <form id="membershipForm" class="membership-form">
+
+                <div class="form-top">
+                    <span id="stepLabel">STEP 1 OF 7</span>
+
+                    <div class="progress-track">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+
+
+                <div class="form-step active">
+
+                    <p class="form-question">01 — THE INTRODUCTION</p>
+
+                    <h3>What should we call you?</h3>
+
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Your full name" required>
+
+                    <label for="age">How old are you?</label>
+                    <input type="number" id="age" name="age"
+                        placeholder="Your age" min="18" required>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">02 — YOUR WORLD</p>
+
+                    <h3>Where are you based?</h3>
+
+                    <label for="location">Your location</label>
+                    <input type="text" id="location" name="location"
+                        placeholder="Town / Area" required>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">03 — YOUR STORY</p>
+
+                    <h3>Tell us a little about yourself.</h3>
+
+                    <label for="about">A little about you</label>
+                    <textarea id="about" name="about"
+                        placeholder="What should we know about you?"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">04 — YOUR INTERESTS</p>
+
+                    <h3>What do you enjoy?</h3>
+
+                    <label for="interests">Your interests</label>
+                    <textarea id="interests" name="interests"
+                        placeholder="Activities, hobbies, experiences..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">05 — YOUR CONTRIBUTION</p>
+
+                    <h3>What would you bring to the community?</h3>
+
+                    <label for="skills">Your skills or talents</label>
+                    <textarea id="skills" name="skills"
+                        placeholder="Anything you would love to share..."></textarea>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">06 — GETTING INVOLVED</p>
+
+                    <h3>How would you like to participate?</h3>
+
+                    <label for="participation">Your preferred participation</label>
+
+                    <select id="participation" name="participation" required>
+                        <option value="">Choose an option</option>
+                        <option value="Physical meet-ups">Physical meet-ups</option>
+                        <option value="Online activities">Online activities</option>
+                        <option value="Both">Both</option>
+                        <option value="Open to anything">Open to anything</option>
+                    </select>
+
+                </div>
+
+
+                <div class="form-step">
+
+                    <p class="form-question">07 — STAY CONNECTED</p>
+
+                    <h3>Let's keep in touch.</h3>
+
+                    <label for="whatsapp">WhatsApp number</label>
+                    <input type="tel" id="whatsapp" name="whatsapp"
+                        placeholder="Your WhatsApp number" required>
+
+                    <label for="extra">Anything else you want us to know?</label>
+                    <textarea id="extra" name="extra"
+                        placeholder="Optional"></textarea>
+
+                </div>
+
+
+                <div class="form-controls">
+
+                    <button type="button" id="backButton" class="back-button">
+                        ← BACK
+                    </button>
+
+                    <button type="button" id="nextButton" class="button button-primary">
+                        CONTINUE →
+                    </button>
+
+                </div>
+
+                <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <section class="final-message">
+
+            <p class="eyebrow">WE ARE BETTER TOGETHER</p>
+
+            <h2>
+                Life is an experience.<br>
+                <em>Let's share it.</em>
+            </h2>
+
+            <a href="#join" class="button button-light final-button">
+                JOIN WE SOCIAL CLUB ↗
+            </a>
+
+        </section>
 
     </main>
 
 
+    <!-- FOOTER -->
 
-    <!-- =================================
-         FOOTER
-    ================================== -->
+    <footer class="site-footer">
 
-    <footer class="footer">
-
-        <div class="footer-main">
-
-            <div class="footer-brand">
-
-                <img src="WE_Social_Club_final.png"
-                     alt="WE Social Club">
-
-                <p>
-                    Good people. Great experiences.
-                    Genuine belonging & v!bes.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>EXPLORE</span>
-
-                <a href="#home">Home</a>
-
-                <a href="#about">About us</a>
-
-                <a href="#community">Community</a>
-
-                <a href="#experiences">Experiences</a>
-
-                <a href="#gallery">Gallery</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>BE PART OF IT</span>
-
-                <a href="#join">Become a member</a>
-
-                <a href="#meetup">Our meetups</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>OUR PHILOSOPHY</span>
-
-                <p>Good people.</p>
-
-                <p>Great experiences.</p>
-
-                <p>Genuine belonging.</p>
-
-                <p>Anti-trauma.</p>
-
-            </div>
-
+        <div class="footer-brand">
+            <img src="WE_Social_Club_final.png" alt="WE Social Club">
         </div>
 
+        <div class="footer-info">
+            <p>GOOD PEOPLE. GREAT EXPERIENCES.</p>
+            <p>GENUINE BELONGING & V!BES.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#about">ABOUT</a>
+            <a href="#experiences">EXPERIENCES</a>
+            <a href="#join">JOIN US</a>
+        </div>
 
         <div class="footer-bottom">
-
-            <span>WE SOCIAL CLUB © 2026</span>
-
-            <span>BUILT AROUND PEOPLE.</span>
-
-            <a href="#home">BACK TO THE TOP ↑</a>
-
+            <span>© <span id="currentYear"></span> WE SOCIAL CLUB</span>
+            <span>MADE FOR CONNECTION.</span>
         </div>
 
     </footer>
 
 
-
     <script src="script.js"></script>
 
 </body>
-
 </html>
