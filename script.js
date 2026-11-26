@@ -1,296 +1,503 @@
-/* =========================================
-   WE SOCIAL CLUB — WEBSITE INTERACTIONS
-========================================= */
+/* ==========================================
+   WE SOCIAL CLUB
+   INTERACTIONS & ANIMATIONS
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
 
 
-/* -----------------------------------------
-   MOBILE NAVIGATION
------------------------------------------ */
+    /* ======================================
+       1. MOBILE NAVIGATION
+    ====================================== */
 
-const menuButton = document.getElementById("menuButton");
-const mainNavigation = document.getElementById("mainNavigation");
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("mainNavigation");
 
-if (menuButton && mainNavigation) {
-    menuButton.addEventListener("click", () => {
-        const isOpen = mainNavigation.classList.toggle("open");
+    if (menuButton && navigation) {
 
-        menuButton.classList.toggle("active", isOpen);
-        menuButton.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu after clicking a navigation link
-    mainNavigation.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            mainNavigation.classList.remove("open");
-            menuButton.classList.remove("active");
-            menuButton.setAttribute("aria-expanded", "false");
-        });
-    });
-
-    // Close menu when Escape is pressed
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") {
-            mainNavigation.classList.remove("open");
+        function closeMenu() {
+            navigation.classList.remove("open");
             menuButton.classList.remove("active");
             menuButton.setAttribute("aria-expanded", "false");
         }
+
+        menuButton.addEventListener("click", () => {
+
+            const isOpen = navigation.classList.toggle("open");
+
+            menuButton.classList.toggle("active", isOpen);
+            menuButton.setAttribute("aria-expanded", isOpen);
+
+        });
+
+        // Close menu after selecting a link
+        navigation.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", closeMenu);
+
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", event => {
+
+            if (
+                !navigation.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                closeMenu();
+            }
+
+        });
+
+        // Close menu with Escape
+        document.addEventListener("keydown", event => {
+
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+
+        });
+
+    }
+
+
+    /* ======================================
+       2. SMOOTH NAVIGATION
+    ====================================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", event => {
+
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || targetId === "#") return;
+
+            const target = document.querySelector(targetId);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            // Update the browser address
+            history.replaceState(null, "", targetId);
+
+        });
+
     });
-}
 
 
-/* -----------------------------------------
-   MEMBERSHIP FORM
------------------------------------------ */
+    /* ======================================
+       3. SECTION REVEAL ANIMATION
+    ====================================== */
 
-const membershipForm = document.getElementById("membershipForm");
+    const revealStyle = document.createElement("style");
 
-if (membershipForm) {
+    revealStyle.textContent = `
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity .8s ease,
+                transform .8s cubic-bezier(.2,.7,.2,1);
+        }
 
-    const steps = Array.from(
-        membershipForm.querySelectorAll(".form-step")
+        .reveal-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .experience-card,
+        .community-card,
+        .gallery-item {
+            will-change: transform;
+        }
+
+        .button:active,
+        .nav-join:active {
+            transform: scale(.96);
+        }
+
+        .button:focus-visible,
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #461619;
+            outline-offset: 5px;
+        }
+    `;
+
+    document.head.appendChild(revealStyle);
+
+    const revealItems = document.querySelectorAll(
+        ".section-heading, .about-grid, .community-grid, " +
+        ".experiences-intro, .experience-card, .meetup-inner, " +
+        ".gallery-heading, .gallery-item, .join-intro, .membership-form"
     );
 
-    const nextButton = document.getElementById("nextButton");
-    const backButton = document.getElementById("backButton");
-    const stepLabel = document.getElementById("stepLabel");
-    const progressFill = document.getElementById("progressFill");
-    const formMessage = document.getElementById("formMessage");
+    revealItems.forEach(item => {
+        item.classList.add("reveal-element");
+    });
 
-    const totalSteps = steps.length;
-    let currentStep = 0;
-    let isSending = false;
+    if ("IntersectionObserver" in window) {
 
-    const submissionURL =
-        "https://script.google.com/macros/s/AKfycbztYwGOawoebwMmyRnwjuseuSNphMgmeNdFpAJi4G772CqE4HArd-Xvq2w4WKERZEs19g/exec";
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
 
+                entries.forEach(entry => {
 
-    // Show the correct form step
-    function showStep(index) {
+                    if (entry.isIntersecting) {
 
-        steps.forEach((step, i) => {
-            step.classList.toggle("active", i === index);
+                        entry.target.classList.add("is-visible");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -40px 0px"
+            }
+        );
+
+        revealItems.forEach(item => {
+            revealObserver.observe(item);
         });
 
-        currentStep = index;
+    } else {
 
-        // Update step counter
-        if (stepLabel) {
-            stepLabel.textContent =
-                `STEP ${currentStep + 1} OF ${totalSteps}`;
-        }
-
-        // Update progress bar
-        if (progressFill) {
-            const progress =
-                ((currentStep + 1) / totalSteps) * 100;
-
-            progressFill.style.width = `${progress}%`;
-        }
-
-        // Back button visibility
-        if (backButton) {
-            backButton.style.display =
-                currentStep === 0 ? "none" : "inline-flex";
-        }
-
-        // Change final button text
-        if (nextButton) {
-            nextButton.textContent =
-                currentStep === totalSteps - 1
-                    ? "SEND APPLICATION →"
-                    : "CONTINUE →";
-        }
-
-        if (formMessage) {
-            formMessage.textContent = "";
-        }
-    }
-
-
-    // Check whether the current step is complete
-    function validateCurrentStep() {
-
-        const currentFields =
-            steps[currentStep].querySelectorAll(
-                "input, select, textarea"
-            );
-
-        for (const field of currentFields) {
-
-            if (!field.checkValidity()) {
-                field.reportValidity();
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-
-    // Move forward
-    if (nextButton) {
-        nextButton.addEventListener("click", () => {
-
-            if (isSending) return;
-
-            if (!validateCurrentStep()) return;
-
-            if (currentStep < totalSteps - 1) {
-                showStep(currentStep + 1);
-            } else {
-                membershipForm.requestSubmit();
-            }
+        revealItems.forEach(item => {
+            item.classList.add("is-visible");
         });
+
     }
 
 
-    // Move backward
-    if (backButton) {
-        backButton.addEventListener("click", () => {
+    /* ======================================
+       4. MEMBERSHIP FORM
+    ====================================== */
 
-            if (isSending) return;
+    const form = document.getElementById("membershipForm");
 
-            if (currentStep > 0) {
-                showStep(currentStep - 1);
-            }
-        });
-    }
+    if (form) {
+
+        const steps = Array.from(
+            form.querySelectorAll(".form-step")
+        );
+
+        const nextButton = document.getElementById("nextButton");
+        const backButton = document.getElementById("backButton");
+        const stepLabel = document.getElementById("stepLabel");
+        const progressFill = document.getElementById("progressFill");
+        const formMessage = document.getElementById("formMessage");
+
+        const totalSteps = steps.length;
+
+        let currentStep = 0;
+        let isSending = false;
+
+        const submissionURL =
+            "https://script.google.com/macros/s/AKfycbztYwGOawoebwMmyRnwjuseuSNphMgmeNdFpAJi4G772CqE4HArd-Xvq2w4WKERZEs19g/exec";
 
 
-    // Submit application
-    membershipForm.addEventListener("submit", async event => {
+        // Display the selected step
+        function displayStep(index) {
 
-        event.preventDefault();
+            steps.forEach((step, position) => {
 
-        if (isSending) return;
-
-        // Validate every step before submission
-        for (let i = 0; i < totalSteps; i++) {
-
-            const fields =
-                steps[i].querySelectorAll(
-                    "input, select, textarea"
+                step.classList.toggle(
+                    "active",
+                    position === index
                 );
+
+            });
+
+            currentStep = index;
+
+            // Step number
+            if (stepLabel) {
+
+                stepLabel.textContent =
+                    `STEP ${index + 1} OF ${totalSteps}`;
+
+            }
+
+            // Progress bar
+            if (progressFill) {
+
+                const progress =
+                    ((index + 1) / totalSteps) * 100;
+
+                progressFill.style.width = `${progress}%`;
+
+            }
+
+            // Back button
+            if (backButton) {
+
+                backButton.style.visibility =
+                    index === 0 ? "hidden" : "visible";
+
+            }
+
+            // Continue / submit button
+            if (nextButton) {
+
+                nextButton.textContent =
+                    index === totalSteps - 1
+                        ? "SEND APPLICATION →"
+                        : "CONTINUE →";
+
+            }
+
+            if (formMessage) {
+                formMessage.textContent = "";
+            }
+
+        }
+
+
+        // Validate fields in the current step
+        function validateStep(index) {
+
+            const fields = steps[index].querySelectorAll(
+                "input, textarea, select"
+            );
 
             for (const field of fields) {
 
                 if (!field.checkValidity()) {
-                    showStep(i);
+
                     field.reportValidity();
-                    return;
+
+                    return false;
+
                 }
+
             }
+
+            return true;
+
         }
 
-        isSending = true;
 
+        // Continue button
         if (nextButton) {
-            nextButton.disabled = true;
-            nextButton.textContent = "SENDING...";
-        }
 
-        if (backButton) {
-            backButton.disabled = true;
-        }
+            nextButton.addEventListener("click", () => {
 
-        if (formMessage) {
-            formMessage.textContent =
-                "Sending your application. Please wait...";
-        }
+                if (isSending) return;
 
-        // Collect the form information
-        const formData = new FormData(membershipForm);
-        const submissionData = new URLSearchParams();
+                if (!validateStep(currentStep)) return;
 
-        formData.forEach((value, key) => {
-            submissionData.append(key, value);
-        });
+                if (currentStep < totalSteps - 1) {
 
-        try {
+                    displayStep(currentStep + 1);
 
-            await fetch(submissionURL, {
-                method: "POST",
-                mode: "no-cors",
-                body: submissionData
+                } else {
+
+                    form.requestSubmit();
+
+                }
+
             });
 
-            // Show confirmation
-            membershipForm.innerHTML = `
-                <div class="form-success">
-                    <span class="success-mark">✳</span>
+        }
 
-                    <p class="eyebrow">WE GOT YOU</p>
 
-                    <h2>You're one step closer to belonging.</h2>
+        // Back button
+        if (backButton) {
 
-                    <p>
-                        Thank you for reaching out to We Social Club.
-                        Your application has been sent. We'll be in touch.
-                    </p>
+            backButton.addEventListener("click", () => {
 
-                    <p class="success-note">
-                        Good people. Great experiences.
-                        Genuine belonging & v!bes.
-                    </p>
-                </div>
-            `;
+                if (isSending) return;
 
-        } catch (error) {
+                if (currentStep > 0) {
 
-            console.error("Application submission error:", error);
+                    displayStep(currentStep - 1);
 
-            isSending = false;
+                }
 
-            if (nextButton) {
-                nextButton.disabled = false;
-                nextButton.textContent = "SEND APPLICATION →";
+            });
+
+        }
+
+
+        // Submit the application
+        form.addEventListener("submit", async event => {
+
+            event.preventDefault();
+
+            if (isSending) return;
+
+
+            // Check every step before submission
+            for (let i = 0; i < totalSteps; i++) {
+
+                if (!validateStep(i)) {
+
+                    displayStep(i);
+
+                    return;
+
+                }
+
             }
 
-            if (backButton) {
-                backButton.disabled = false;
-            }
+
+            isSending = true;
+
+            nextButton.disabled = true;
+            nextButton.textContent = "SENDING...";
+
+            backButton.disabled = true;
 
             if (formMessage) {
+
                 formMessage.textContent =
-                    "Something went wrong. Please try again.";
+                    "Please wait while we send your application...";
+
             }
-        }
+
+
+            // Collect the information
+            const formData = new FormData(form);
+            const submissionData = new URLSearchParams();
+
+            formData.forEach((value, key) => {
+
+                submissionData.append(key, value);
+
+            });
+
+
+            try {
+
+                await fetch(submissionURL, {
+
+                    method: "POST",
+
+                    mode: "no-cors",
+
+                    body: submissionData
+
+                });
+
+
+                // Confirmation screen
+                form.innerHTML = `
+
+                    <div class="form-success">
+
+                        <span class="success-mark">✳</span>
+
+                        <p class="eyebrow">WELCOME TO THE POSSIBILITY</p>
+
+                        <h2>There's room for you.</h2>
+
+                        <p>
+                            Thank you for reaching out to WE Social Club.
+                            Your application has been submitted.
+                            We look forward to connecting with you.
+                        </p>
+
+                        <p class="success-note">
+                            GOOD PEOPLE. GREAT EXPERIENCES.
+                            GENUINE BELONGING & V!BES.
+                        </p>
+
+                    </div>
+
+                `;
+
+            } catch (error) {
+
+                console.error(
+                    "WE Social Club form error:",
+                    error
+                );
+
+                isSending = false;
+
+                nextButton.disabled = false;
+                nextButton.textContent = "SEND APPLICATION →";
+
+                backButton.disabled = false;
+
+                if (formMessage) {
+
+                    formMessage.textContent =
+                        "We couldn't send your application. Please try again.";
+
+                }
+
+            }
+
+        });
+
+
+        // Start at step one
+        displayStep(0);
+
+    }
+
+
+    /* ======================================
+       5. FOOTER YEAR
+    ====================================== */
+
+    const year = document.getElementById("currentYear");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+
+    /* ======================================
+       6. LOGO MOVEMENT
+    ====================================== */
+
+    const logos = document.querySelectorAll(
+        ".brand img, .hero-logo, .footer-brand img"
+    );
+
+    logos.forEach((logo, index) => {
+
+        logo.style.animationDelay = `${index * 0.4}s`;
+
     });
 
 
-    // Start at the first step
-    showStep(0);
-}
+    /* ======================================
+       7. GALLERY IMAGE INTERACTION
+    ====================================== */
+
+    document.querySelectorAll(".gallery-item").forEach(item => {
+
+        item.addEventListener("mouseenter", () => {
+
+            item.style.zIndex = "2";
+
+        });
+
+        item.addEventListener("mouseleave", () => {
+
+            item.style.zIndex = "1";
+
+        });
+
+    });
 
 
-/* -----------------------------------------
-   FOOTER YEAR
------------------------------------------ */
+    console.log("WE Social Club website is ready.");
 
-const yearElement = document.getElementById("currentYear");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
-
-
-/* -----------------------------------------
-   CLOSE NAVIGATION WHEN CLICKING OUTSIDE
------------------------------------------ */
-
-document.addEventListener("click", event => {
-
-    if (!menuButton || !mainNavigation) return;
-
-    const clickedInsideMenu =
-        mainNavigation.contains(event.target);
-
-    const clickedButton =
-        menuButton.contains(event.target);
-
-    if (!clickedInsideMenu && !clickedButton) {
-        mainNavigation.classList.remove("open");
-        menuButton.classList.remove("active");
-        menuButton.setAttribute("aria-expanded", "false");
-    }
 });
