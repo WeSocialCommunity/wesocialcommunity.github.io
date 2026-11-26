@@ -3,126 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A collection of real moments, memories and experiences from WE Social Club.">
-  <title>Gallery | WE SOCIAL CLUB</title>
+
+  <title>Gallery — WE SOCIAL CLUB</title>
+  <meta name="description" content="A collection of real moments, shared experiences and memories from We Social Club.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
+<div class="grain-overlay"></div>
+
 <header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="assets/logo.png" alt="WE Social Club logo">
+  <a href="index.html" class="brand" aria-label="We Social Club homepage">
+    <img src="assets/logo.png" alt="WE SOCIAL CLUB">
   </a>
 
-  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">Our Story</a>
     <a href="community.html">Community</a>
     <a href="experiences.html">Experiences</a>
     <a href="gallery.html" class="active">Gallery</a>
-    <a href="join.html" class="nav-join">Join Us</a>
+    <a href="join.html" class="nav-join">Join Us <span>↗</span></a>
   </nav>
 </header>
 
+
 <main>
 
-<section class="page-hero">
-  <p class="eyebrow">THE MEMORY ARCHIVE</p>
-  <h1>REAL PEOPLE. REAL MOMENTS.</h1>
-  <p>
-    Not everything meaningful needs a perfect photograph.
-    These are the moments, people and experiences that make
-    WE Social Club what it is.
-  </p>
-</section>
+  <!-- GALLERY INTRO -->
+  <section class="page-hero section-padding">
 
-<section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">A LITTLE LOOK INTO OUR WORLD</p>
-    <h2>Memories in motion.</h2>
+    <p class="eyebrow">01 — THE MOMENTS WE KEEP</p>
+
+    <h1>
+      A little proof<br>
+      that life is better<br>
+      <em>together.</em>
+    </h1>
+
     <p>
-      Every gathering leaves us with something:
-      a new friendship, an unexpected laugh or a moment
-      worth remembering.
+      Not staged. Not perfect. Just real people, real experiences
+      and moments worth remembering.
     </p>
-  </div>
 
-  <div class="gallery-grid">
+  </section>
 
-    <figure class="gallery-item gallery-large">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/lone.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Where connection begins.</figcaption>
-    </figure>
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/birthday.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Celebrating one another.</figcaption>
-    </figure>
+  <!-- GALLERY NOTE -->
+  <section class="content-section section-padding">
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/bbutter.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Good voices. Better company.</figcaption>
-    </figure>
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">02 — THE WE SOCIAL CLUB ARCHIVE</p>
+        <h2>Life, as it <em>happened.</em></h2>
+      </div>
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/torch.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>This is WE Social Club.</figcaption>
-    </figure>
+      <p>
+        Every gathering leaves something behind.
+        These are some of the moments that make this community.
+      </p>
+    </div>
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/vlog.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Making ordinary days memorable.</figcaption>
-    </figure>
+    <div class="gallery-grid">
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/life.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Life sounds better together.</figcaption>
-    </figure>
+      <!-- VIDEO 1 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/lone.mp4" type="video/mp4">
+        </video>
 
-    <figure class="gallery-item">
-      <video autoplay muted loop playsinline>
-        <source src="assets/videos/sit.mp4" type="video/mp4">
-      </video>
-      <button class="sound-toggle" type="button">Sound on</button>
-      <figcaption>Making room for every voice.</figcaption>
-    </figure>
+        <div class="video-placeholder">
+          <span class="placeholder-mark">01 / BEGINNING</span>
+          <p>THE FIRST STEP.</p>
+        </div>
 
-  </div>
-</section>
+        <div class="gallery-caption">
+          <span>01</span>
+          <p>Finding your people.</p>
+        </div>
 
-<section class="closing-section">
-  <h2>The next memory could be yours.</h2>
-  <a href="join.html" class="button button-dark">BE PART OF IT</a>
-</section>
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 2 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/bbutter.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">02 / MUSIC</span>
+          <p>SING IT TOGETHER.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>02</span>
+          <p>Music brings us together.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 3 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/birthday.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">03 / CELEBRATION</span>
+          <p>MAKE A WISH.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>03</span>
+          <p>Celebrating one another.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 4 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/life.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">04 / LIVE</span>
+          <p>LIVE YOUR LIFE.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>04</span>
+          <p>More life. More memories.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 5 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/sit.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">05 / STORIES</span>
+          <p>ROOM FOR EVERY VOICE.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>05</span>
+          <p>Conversations that matter.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 6 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/torch.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">06 / TOGETHER</span>
+          <p>ONE COMMUNITY.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>06</span>
+          <p>Lighting up the night.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+
+      <!-- VIDEO 7 -->
+      <article class="gallery-item">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/vlog.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">07 / PLAY</span>
+          <p>LET'S HAVE SOME FUN.</p>
+        </div>
+
+        <div class="gallery-caption">
+          <span>07</span>
+          <p>Games and good v!bes.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING -->
+  <section class="closing-section section-padding">
+
+    <p class="eyebrow">08 — YOUR MOMENT COULD BE NEXT</p>
+
+    <h2>
+      Don't just watch<br>
+      the memories. <em>Make them.</em>
+    </h2>
+
+    <p>
+      Come be part of the experiences, the laughter
+      and the stories still waiting to happen.
+    </p>
+
+    <a href="join.html" class="button button-dark">
+      JOIN WE SOCIAL CLUB <span>↗</span>
+    </a>
+
+  </section>
 
 </main>
 
+
 <footer class="site-footer">
-  <img src="assets/logo.png" alt="WE Social Club logo">
-  <p>Good people. Great experiences. Genuine belonging & v!bes.</p>
-  <p>© <span class="current-year"></span> WE SOCIAL CLUB</p>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="WE SOCIAL CLUB">
+      </a>
+
+      <p>
+        Good people. Great experiences.<br>
+        Genuine belonging &amp; v!bes.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+        <span>EXPLORE</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="community.html">Community</a>
+        <a href="experiences.html">Experiences</a>
+      </div>
+
+      <div>
+        <span>GET INVOLVED</span>
+        <a href="join.html">Join the Club</a>
+        <a href="join.html">Get in Touch</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+    <span>MADE FOR PEOPLE. BY PEOPLE.</span>
+    <a href="index.html">BACK HOME ↑</a>
+  </div>
+
 </footer>
 
 </body>
