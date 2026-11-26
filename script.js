@@ -1,6 +1,6 @@
-/* =========================================
-   WE SOCIAL CLUB — MAIN JAVASCRIPT
-========================================= */
+/* =====================================================
+   WE SOCIAL CLUB — WEBSITE ENGINE
+===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -9,29 +9,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const navigation = document.querySelector(".main-nav");
 
   if (menuButton && navigation) {
+
     menuButton.addEventListener("click", function () {
+
       navigation.classList.toggle("open");
 
-      const isOpen = navigation.classList.contains("open");
+      const open = navigation.classList.contains("open");
 
-      menuButton.setAttribute("aria-expanded", isOpen);
-      menuButton.textContent = isOpen ? "✕" : "☰";
+      menuButton.setAttribute("aria-expanded", open);
+      menuButton.classList.toggle("is-open", open);
+
+      if (!menuButton.querySelector("span")) {
+        menuButton.textContent = open ? "✕" : "☰";
+      }
+
     });
 
     navigation.querySelectorAll("a").forEach(function (link) {
+
       link.addEventListener("click", function () {
         navigation.classList.remove("open");
         menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "☰";
+        menuButton.classList.remove("is-open");
       });
+
     });
+
   }
 
-
-  // VIDEO AUTOPLAY AND LOOPING
+  // VIDEO PLAYBACK
   const videos = document.querySelectorAll("video");
 
   videos.forEach(function (video) {
+
     video.muted = true;
     video.loop = true;
     video.autoplay = true;
@@ -42,47 +52,74 @@ document.addEventListener("DOMContentLoaded", function () {
     video.setAttribute("loop", "");
     video.setAttribute("playsinline", "");
 
-    video.play().catch(function () {
-      // Some browsers require user interaction before playback.
-    });
-  });
+    const wrapper = video.parentElement;
 
+    const placeholder = wrapper
+      ? wrapper.querySelector(".video-placeholder")
+      : null;
 
-  // VIDEO SOUND CONTROLS
-  const soundButtons = document.querySelectorAll(".sound-toggle");
-
-  soundButtons.forEach(function (button) {
-
-    button.textContent = "Sound on";
-
-    button.addEventListener("click", function () {
-
-      const container = button.parentElement;
-      const video = container.querySelector("video");
-
-      if (!video) return;
-
-      if (video.muted) {
-        video.muted = false;
-        button.textContent = "Mute sound";
-      } else {
-        video.muted = true;
-        button.textContent = "Sound on";
+    function videoReady() {
+      if (placeholder) {
+        placeholder.classList.add("is-hidden");
       }
+    }
 
-      video.play().catch(function () {
-        video.muted = true;
-        button.textContent = "Sound on";
-      });
+    function videoFailed() {
+      if (placeholder) {
+        placeholder.classList.remove("is-hidden");
+        placeholder.textContent = "THIS VIDEO COULD NOT LOAD";
+      }
+    }
+
+    video.addEventListener("loadeddata", videoReady);
+    video.addEventListener("canplay", videoReady);
+    video.addEventListener("error", videoFailed);
+
+    if (video.readyState >= 2) {
+      videoReady();
+    }
+
+    video.play().catch(function () {
+      // Some browsers require user interaction.
+    });
+
+  });
+
+  // SOUND CONTROLS
+  document.querySelectorAll(".sound-toggle").forEach(function (button) {
+
+    const container = button.closest(
+      ".hero-video-frame, .feature-video, .movie-image, .community-card, .community-feature-video, .experience-card, .gallery-item"
+    ) || button.parentElement;
+
+    const video = container.querySelector("video");
+
+    if (!video) return;
+
+    function updateSoundLabel() {
+      button.textContent = video.muted ? "SOUND ON" : "SOUND OFF";
+    }
+
+    updateSoundLabel();
+
+    button.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      video.muted = !video.muted;
+
+      updateSoundLabel();
+
+      video.play().catch(function () {});
 
     });
 
   });
 
+  // PLAY VIDEOS WHEN VISIBLE
+  if ("IntersectionObserver" in window) {
 
-  // PAUSE VIDEOS WHEN THEY ARE OFF SCREEN
-  const videoObserver = new IntersectionObserver(
-    function (entries) {
+    const observer = new IntersectionObserver(function (entries) {
 
       entries.forEach(function (entry) {
 
@@ -96,23 +133,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
       });
 
-    },
-    {
+    }, {
       threshold: 0.15
-    }
-  );
+    });
 
-  videos.forEach(function (video) {
-    videoObserver.observe(video);
+    videos.forEach(function (video) {
+      observer.observe(video);
+    });
+
+  }
+
+  // SMOOTH PAGE TRANSITIONS
+  document.querySelectorAll("a[href]").forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const destination = link.getAttribute("href");
+
+      if (
+        !destination ||
+        destination.startsWith("#") ||
+        destination.startsWith("http") ||
+        destination.startsWith("mailto:") ||
+        destination.startsWith("tel:") ||
+        link.target === "_blank" ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+
+      document.body.classList.add("page-leaving");
+
+      setTimeout(function () {
+        window.location.href = destination;
+      }, 220);
+
+    });
+
   });
 
-
-  // AUTOMATIC COPYRIGHT YEAR
-  const yearElements = document.querySelectorAll(".current-year");
-
-  yearElements.forEach(function (element) {
+  // COPYRIGHT YEAR
+  document.querySelectorAll("#year, .current-year").forEach(function (element) {
     element.textContent = new Date().getFullYear();
   });
-
 
 });
