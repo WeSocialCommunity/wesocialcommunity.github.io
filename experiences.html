@@ -1,86 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experiences | WE Social Club</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the games, music, conversations and shared experiences at WE Social Club.">
+  <title>Experiences | WE SOCIAL CLUB</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-<div class="paper-grain"></div>
 
 <header class="site-header">
-<a href="index.html" class="brand"><img src="WE_Social_Club_final.png" alt="WE Social Club"></a>
-<button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-<nav class="navigation" id="mainNavigation">
-<a href="index.html">HOME</a><a href="story.html">OUR STORY</a>
-<a href="community.html">COMMUNITY</a>
-<a href="experiences.html" class="active">EXPERIENCES</a>
-<a href="gallery.html">GALLERY</a><a href="join.html" class="nav-join">JOIN US ↗</a>
-</nav>
+  <a href="index.html" class="brand">
+    <img src="assets/logo.png" alt="WE Social Club logo">
+  </a>
+
+  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="community.html">Community</a>
+    <a href="experiences.html" class="active">Experiences</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="join.html" class="nav-join">Join Us</a>
+  </nav>
 </header>
 
-<main class="inner-page section-wrap">
-
-<div class="page-kicker">03 / WHAT WE DO</div>
+<main>
 
 <section class="page-hero">
-<p class="eyebrow">LIFE HAPPENS HERE</p>
-<h1>Make room<br>for <em>living.</em></h1>
-<p class="page-lead">
-We create opportunities to step outside the routine, meet people,
-try something different and make memories together.
-</p>
+  <p class="eyebrow">LIFE HAPPENS HERE</p>
+  <h1>LESS SCROLLING. MORE LIVING.</h1>
+  <p>
+    The conversations, games, music, laughter and unexpected
+    friendships that turn an ordinary Sunday into a memory.
+  </p>
 </section>
 
-<section class="experience-list">
+<section class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">WHAT WE GET UP TO</p>
+    <h2>We don't just meet. We experience.</h2>
+    <p>
+      Every gathering is an opportunity to connect, try something
+      different and create memories with people who make life lighter.
+    </p>
+  </div>
 
-<article class="experience-row">
-<span>01</span><div><h2>Social Gatherings</h2><p>Meet new people, reconnect with familiar faces, share stories and enjoy good company.</p></div><span>↗</span>
-</article>
+  <div class="experience-grid">
 
-<article class="experience-row">
-<span>02</span><div><h2>Outdoor Experiences</h2><p>Explore, discover new places and create memories beyond the everyday routine.</p></div><span>↗</span>
-</article>
+    <article class="experience-card">
+      <div class="experience-image">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/vlog.mp4" type="video/mp4">
+        </video>
+        <button class="sound-toggle" type="button">Sound on</button>
+      </div>
+      <div class="experience-copy">
+        <p class="eyebrow">01 / PLAY</p>
+        <h3>Games & friendly competition</h3>
+        <p>
+          A little competition, a lot of laughter and the kind of
+          moments that bring strangers closer.
+        </p>
+      </div>
+    </article>
 
-<article class="experience-row">
-<span>03</span><div><h2>Movie Nights</h2><p>Films, popcorn, cushions, conversations and evenings worth looking forward to.</p></div><span>↗</span>
-</article>
+    <article class="experience-card">
+      <div class="experience-image">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/life.mp4" type="video/mp4">
+        </video>
+        <button class="sound-toggle" type="button">Sound on</button>
+      </div>
+      <div class="experience-copy">
+        <p class="eyebrow">02 / MUSIC</p>
+        <h3>Music & expression</h3>
+        <p>
+          Singing together, sharing energy and letting the moment
+          take us somewhere beyond the ordinary.
+        </p>
+      </div>
+    </article>
 
-<article class="experience-row">
-<span>04</span><div><h2>Games & Activities</h2><p>Friendly competition, teamwork, movement and laughter.</p></div><span>↗</span>
-</article>
+    <article class="experience-card">
+      <div class="experience-image">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/sit.mp4" type="video/mp4">
+        </video>
+        <button class="sound-toggle" type="button">Sound on</button>
+      </div>
+      <div class="experience-copy">
+        <p class="eyebrow">03 / CONVERSATION</p>
+        <h3>Real conversations</h3>
+        <p>
+          Sometimes the most meaningful experience is sitting
+          together and genuinely listening to one another.
+        </p>
+      </div>
+    </article>
 
-<article class="experience-row">
-<span>05</span><div><h2>Conversations</h2><p>Space for real conversations, different perspectives and genuine connection.</p></div><span>↗</span>
-</article>
+    <article class="experience-card">
+      <div class="experience-image">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/torch.mp4" type="video/mp4">
+        </video>
+        <button class="sound-toggle" type="button">Sound on</button>
+      </div>
+      <div class="experience-copy">
+        <p class="eyebrow">04 / IDENTITY</p>
+        <h3>Moments that define us</h3>
+        <p>
+          The spontaneous, unforgettable moments that remind us
+          what it means to be part of something.
+        </p>
+      </div>
+    </article>
 
-<article class="experience-row">
-<span>06</span><div><h2>Surprises & More</h2><p>New ideas and experiences shaped by the people who make up our community.</p></div><span>↗</span>
-</article>
-
+  </div>
 </section>
 
-<section class="experience-weekly">
-<div>
-<p class="eyebrow">OUR WEEKLY RITUAL</p>
-<h2>Sundays are<br>for <em>us.</em></h2>
-</div>
-<div>
-<p>Every Sunday, from 3:30 PM. We gather, connect and enjoy the afternoon together.</p>
-<a href="join.html" class="button">JOIN THE NEXT MEET-UP ↗</a>
-</div>
+<section class="content-section dark-section">
+  <p class="eyebrow">THE SUNDAY TRADITION</p>
+  <h2>One Sunday can change the shape of your week.</h2>
+  <p>
+    We meet, share experiences and recharge together.
+    No pressure to impress. No requirement to have everything
+    figured out. Just good people and genuine connection.
+  </p>
+  <h3>SUNDAYS · 3:30 PM UNTIL WE'RE TIRED</h3>
+</section>
+
+<section class="closing-section">
+  <h2>Come make a memory with us.</h2>
+  <a href="join.html" class="button button-dark">JOIN THE COMMUNITY</a>
 </section>
 
 </main>
 
 <footer class="site-footer">
-<div class="footer-top"><div><h3>WE|S.CLUB</h3><p>Good people. Great experiences.<br>Genuine belonging & V!BES.</p></div>
-<div class="footer-links"><a href="index.html">HOME</a><a href="story.html">OUR STORY</a><a href="community.html">COMMUNITY</a><a href="gallery.html">GALLERY</a><a href="join.html">JOIN US</a></div></div>
-<div class="footer-bottom"><span>© <span id="currentYear"></span> WE SOCIAL CLUB</span><span>MADE FOR CONNECTION.</span></div>
+  <img src="assets/logo.png" alt="WE Social Club logo">
+  <p>Good people. Great experiences. Genuine belonging & v!bes.</p>
+  <p>© <span class="current-year"></span> WE SOCIAL CLUB</p>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>
