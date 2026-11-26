@@ -3,138 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Become part of WE Social Club. Find your people, share experiences and build genuine connections.">
-  <title>Join Us | WE SOCIAL CLUB</title>
+
+  <title>Join Us — WE SOCIAL CLUB</title>
+  <meta name="description" content="Become part of We Social Club. Meet good people, share experiences and find genuine belonging.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
+<div class="grain-overlay"></div>
+
 <header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="assets/logo.png" alt="WE Social Club logo">
+  <a href="index.html" class="brand" aria-label="We Social Club homepage">
+    <img src="assets/logo.png" alt="WE SOCIAL CLUB">
   </a>
 
-  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">Our Story</a>
     <a href="community.html">Community</a>
     <a href="experiences.html">Experiences</a>
     <a href="gallery.html">Gallery</a>
-    <a href="join.html" class="nav-join active">Join Us</a>
+    <a href="join.html" class="nav-join active">Join Us <span>↗</span></a>
   </nav>
 </header>
 
+
 <main>
 
-<section class="page-hero">
-  <p class="eyebrow">YOUR PEOPLE ARE HERE</p>
-  <h1>THERE'S A PLACE FOR YOU.</h1>
-  <p>
-    You don't need a special reason to join.
-    You just need to be open to meeting people,
-    sharing experiences and being part of a community.
-  </p>
-</section>
+  <!-- INTRO -->
+  <section class="page-hero section-padding">
 
-<section class="join-layout content-section">
+    <p class="eyebrow">01 — YOUR PEOPLE ARE OUT THERE</p>
 
-  <div class="join-intro">
-    <p class="eyebrow">LET'S GET TO KNOW YOU</p>
-    <h2>Come as you are.</h2>
+    <h1>
+      You don't have<br>
+      to figure out<br>
+      life <em>alone.</em>
+    </h1>
+
     <p>
-      Tell us a little about yourself. This helps us welcome you
-      and understand how you'd like to participate.
+      Come as you are. Meet people. Share experiences.
+      Find a community where you can feel comfortable
+      being yourself.
     </p>
 
-    <div class="join-note">
-      <h3>What to expect</h3>
-      <ul>
-        <li>A welcoming, judgement-free community.</li>
-        <li>Free social gatherings and shared experiences.</li>
-        <li>Friendship, conversations, games and good energy.</li>
-        <li>Room to participate at your own pace.</li>
-      </ul>
+  </section>
+
+
+  <!-- JOIN SECTION -->
+  <section class="join-section section-padding">
+
+    <div class="join-intro">
+
+      <p class="eyebrow">02 — LET'S GET TO KNOW YOU</p>
+
+      <h2>
+        Every good connection<br>
+        starts with <em>hello.</em>
+      </h2>
+
+      <p>
+        Tell us a little about yourself. This is your first
+        step towards becoming part of We Social Club.
+      </p>
+
+      <div class="join-note">
+        <span>BEFORE YOU BEGIN</span>
+
+        <p>
+          We welcome adults aged 18 and above. Your information
+          helps us understand our community and how you would
+          like to participate.
+        </p>
+      </div>
+
     </div>
 
-    <p class="eyebrow">OUR SUNDAY MEETUPS</p>
-    <h3>Every Sunday · 3:30 PM until we're tired.</h3>
-  </div>
 
-  <form class="join-form"
+    <!-- MEMBERSHIP FORM -->
+    <div class="join-form-wrap">
+
+      <form
+        id="membership-form"
         action="https://script.google.com/macros/s/AKfycbztYwGOawoebwMmyRnwjuseuSNphMgmeNdFpAJi4G772CqE4HArd-Xvq2w4WKERZEs19g/exec"
         method="POST"
-        target="form-response-frame"
-        onsubmit="document.getElementById('form-message').textContent='Submitting your application…';">
+        target="submission-frame"
+      >
 
-    <h2>Membership form</h2>
-    <p class="form-intro">A few details to help us welcome you.</p>
+        <div class="form-heading">
+          <span>WE SOCIAL CLUB / MEMBERSHIP</span>
+          <span>APPLICATION 001</span>
+        </div>
 
-    <label for="name">Your full name *</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <label for="age">Your age *</label>
-    <input type="number" id="age" name="age" min="18" placeholder="18 or above" required>
+        <div class="form-group">
+          <label for="name">YOUR NAME *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="What should we call you?"
+            required
+          >
+        </div>
 
-    <label for="location">Where are you based? *</label>
-    <input type="text" id="location" name="location" placeholder="Town or district" required>
 
-    <label for="about">Tell us a little about yourself</label>
-    <textarea id="about" name="about" rows="3" placeholder="A little about you..."></textarea>
+        <div class="form-row">
 
-    <label for="interests">What interests you about WE Social Club?</label>
-    <textarea id="interests" name="interests" rows="3" placeholder="What brings you here?"></textarea>
+          <div class="form-group">
+            <label for="age">AGE *</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              placeholder="18+"
+              required
+            >
+          </div>
 
-    <label for="skills">What would you enjoy bringing into the community?</label>
-    <textarea id="skills" name="skills" rows="3" placeholder="Your interests, talents, ideas or experiences..."></textarea>
+          <div class="form-group">
+            <label for="location">WHERE ARE YOU FROM? *</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Town / Area"
+              required
+            >
+          </div>
 
-    <label for="participation">How would you like to participate?</label>
-    <select id="participation" name="participation">
-      <option value="">Choose an option</option>
-      <option value="Attend gatherings">Attend gatherings</option>
-      <option value="Volunteer">Volunteer</option>
-      <option value="Help organise activities">Help organise activities</option>
-      <option value="Support the community">Support the community</option>
-      <option value="Still figuring it out">Still figuring it out</option>
-    </select>
+        </div>
 
-    <label for="whatsapp">WhatsApp number *</label>
-    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+256..." required>
 
-    <label for="extra">Anything else you'd like us to know?</label>
-    <textarea id="extra" name="extra" rows="3" placeholder="Optional"></textarea>
+        <div class="form-group">
+          <label for="about">TELL US A LITTLE ABOUT YOURSELF *</label>
+          <textarea
+            id="about"
+            name="about"
+            rows="4"
+            placeholder="A little about who you are..."
+            required
+          ></textarea>
+        </div>
 
-    <label class="consent-label">
-      <input type="checkbox" name="consent" value="Yes" required>
-      <span>I confirm that I am 18 or older and agree to be contacted about WE Social Club activities.</span>
-    </label>
 
-    <button type="submit" class="button button-dark form-submit">
-      SUBMIT APPLICATION
-    </button>
+        <div class="form-group">
+          <label for="interests">WHAT DO YOU ENJOY? *</label>
+          <textarea
+            id="interests"
+            name="interests"
+            rows="3"
+            placeholder="Music, travel, conversations, games, movies..."
+            required
+          ></textarea>
+        </div>
 
-    <p id="form-message" class="form-message" aria-live="polite"></p>
 
-    <iframe name="form-response-frame" id="form-response-frame" hidden></iframe>
+        <div class="form-group">
+          <label for="skills">WHAT CAN YOU SHARE WITH THE COMMUNITY?</label>
+          <textarea
+            id="skills"
+            name="skills"
+            rows="3"
+            placeholder="Skills, knowledge, experiences, ideas..."
+          ></textarea>
+        </div>
 
-    <p class="privacy-note">
-      Your details are collected to help us manage membership
-      and communicate about community activities.
+
+        <div class="form-group">
+          <label for="participation">HOW WOULD YOU LIKE TO PARTICIPATE? *</label>
+
+          <select id="participation" name="participation" required>
+            <option value="">Choose an option</option>
+            <option value="Attend meetups">Attend meetups</option>
+            <option value="Join activities and events">Join activities and events</option>
+            <option value="Volunteer and help organise">Volunteer and help organise</option>
+            <option value="Share skills and knowledge">Share skills and knowledge</option>
+            <option value="Support the community">Support the community</option>
+            <option value="A little bit of everything">A little bit of everything</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+          <label for="whatsapp">WHATSAPP NUMBER *</label>
+          <input
+            type="tel"
+            id="whatsapp"
+            name="whatsapp"
+            placeholder="+256..."
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="extra">ANYTHING ELSE YOU'D LIKE US TO KNOW?</label>
+          <textarea
+            id="extra"
+            name="extra"
+            rows="3"
+            placeholder="Anything you'd like to add..."
+          ></textarea>
+        </div>
+
+
+        <div class="form-consent">
+          <label>
+            <input type="checkbox" name="consent" value="Yes" required>
+            <span>
+              I agree to share this information with We Social Club
+              for membership and community communication purposes.
+            </span>
+          </label>
+        </div>
+
+
+        <button type="submit" class="button button-dark form-submit">
+          SEND MY APPLICATION <span>↗</span>
+        </button>
+
+        <p class="form-footnote">
+          YOUR INFORMATION IS FOR WE SOCIAL CLUB MEMBERSHIP PURPOSES.
+        </p>
+
+        <p id="form-status" role="status" aria-live="polite"></p>
+
+      </form>
+
+      <iframe
+        name="submission-frame"
+        id="submission-frame"
+        title="Membership form submission"
+        style="display:none;"
+      ></iframe>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING -->
+  <section class="closing-section section-padding">
+
+    <p class="eyebrow">03 — WE'LL SAVE YOU A PLACE</p>
+
+    <h2>
+      Good people.<br>
+      Great experiences.<br>
+      <em>Genuine belonging.</em>
+    </h2>
+
+    <p>
+      We look forward to meeting you.
     </p>
 
-  </form>
+    <a href="index.html" class="button button-dark">
+      BACK TO HOME <span>↗</span>
+    </a>
 
-</section>
+  </section>
 
 </main>
 
+
 <footer class="site-footer">
-  <img src="assets/logo.png" alt="WE Social Club logo">
-  <p>Good people. Great experiences. Genuine belonging & v!bes.</p>
-  <p>© <span class="current-year"></span> WE SOCIAL CLUB</p>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="WE SOCIAL CLUB">
+      </a>
+
+      <p>
+        Good people. Great experiences.<br>
+        Genuine belonging &amp; v!bes.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+        <span>EXPLORE</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="community.html">Community</a>
+        <a href="experiences.html">Experiences</a>
+          <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div>
+        <span>GET INVOLVED</span>
+        <a href="join.html">Join the Club</a>
+        <a href="join.html">Get in Touch</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+    <span>MADE FOR PEOPLE. BY PEOPLE.</span>
+    <a href="index.html">BACK HOME ↑</a>
+  </div>
+
 </footer>
 
 </body>
