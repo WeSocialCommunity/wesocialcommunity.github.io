@@ -1,544 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We Social Club — good people, great experiences and genuine belonging. An anti-trauma community in Mbale, Uganda.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WE|S.CLUB — Good People. Great Experiences.</title>
+  <title>WE SOCIAL CLUB — Genuine Belonging</title>
 
-    <link rel="stylesheet" href="style.css">
+  <meta name="description" content="A space for good people, great experiences, genuine belonging and v!bes. We Social Club — Mbale, Uganda.">
+  <meta name="theme-color" content="#eee9df">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<div class="grain-overlay"></div>
+  <div class="grain-overlay"></div>
 
-<header class="site-header">
-
-    <a href="index.html" class="brand">
-        <img src="assets/logo.png" alt="WE Social Club">
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="We Social Club homepage">
+      <img src="assets/logo.png" alt="WE SOCIAL CLUB">
     </a>
 
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">Our Story</a>
-        <a href="community.html">Community</a>
-        <a href="experiences.html">Experiences</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="join.html" class="nav-join">JOIN US ↗</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Our Story</a>
+      <a href="community.html">Community</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="join.html" class="nav-join">Join Us <span>↗</span></a>
     </nav>
+  </header>
 
-</header>
 
-
-<main>
+  <main>
 
     <!-- HERO -->
-
     <section class="hero section-padding">
 
-        <div class="hero-copy">
+      <div class="hero-copy">
+        <p class="eyebrow">MBale, UGANDA &nbsp; / &nbsp; A DIFFERENT KIND OF CLUB</p>
 
-            <p class="eyebrow">
-                <span class="red-dot"></span>
-                MBALE, UGANDA · A COMMUNITY BUILT AROUND CONNECTION
-            </p>
+        <h1>
+          Life feels better<br>
+          with people who<br>
+          <em>get you.</em>
+        </h1>
 
-            <h1>
-                Good people.<br>
-                Great experiences.<br>
-                <em>Genuine belonging.</em>
-            </h1>
+        <p class="hero-description">
+          A place to breathe, connect, laugh, share stories and experience
+          life with good people. No pressure. No judgement. Just genuine
+          belonging.
+        </p>
 
-            <p class="hero-description">
-                Sometimes, what we need most isn't another solution.
-                It's somewhere to belong. Somewhere to breathe.
-                Somewhere to be around people who understand.
-            </p>
+        <div class="hero-actions">
+          <a href="join.html" class="button button-dark">
+            FIND YOUR PEOPLE <span>↗</span>
+          </a>
 
-            <div class="hero-actions">
-                <a href="join.html" class="button button-dark">
-                    FIND YOUR PEOPLE <span>↗</span>
-                </a>
-
-                <a href="about.html" class="text-link">
-                    Discover our story →
-                </a>
-            </div>
-
-            <div class="hero-note">
-                <span>WE|S.CLUB</span>
-                <span>MORE THAN A SOCIAL CLUB.</span>
-            </div>
-
+          <a href="about.html" class="text-link">
+            GET TO KNOW US <span>→</span>
+          </a>
         </div>
 
+        <p class="hero-note">
+          GOOD PEOPLE. GREAT EXPERIENCES. GENUINE BELONGING.
+        </p>
+      </div>
 
-        <div class="hero-visual">
+      <div class="hero-visual">
+        <div class="hero-video-frame">
 
-            <div class="hero-video-frame">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source src="assets/videos/lone.mp4" type="video/mp4">
+          </video>
 
-                <video class="loop-video" autoplay muted loop playsinline preload="metadata">
-                    <source src="assets/videos/lone.mp4" type="video/mp4">
-                </video>
+          <div class="video-placeholder">
+            <span class="placeholder-mark">WE / S.CLUB</span>
+            <p>REAL PEOPLE. REAL CONNECTION.</p>
+          </div>
 
-                <div class="video-placeholder">
-                    <span>INTRODUCING WE SOCIAL CLUB</span>
-                </div>
+          <div class="hero-video-caption">
+            <span>01 — THE BEGINNING</span>
+            <span>PRESS PLAY ON LIFE</span>
+          </div>
 
-                <div class="hero-video-caption">
-                    KICKING LONELINESS. BUILDING CONNECTION.
-                </div>
-
-                <button class="sound-toggle" type="button">
-                    SOUND OFF
-                </button>
-
-            </div>
-
-            <div class="hero-stamp">
-                <span>WE</span>
-                <span>ARE</span>
-                <span>BETTER</span>
-                <span>TOGETHER.</span>
-            </div>
-
+          <button class="sound-toggle" type="button">SOUND OFF</button>
         </div>
+
+        <div class="hero-stamp">
+          <span>ANTI-TRAUMA</span>
+          <span>ANTI-LONELINESS</span>
+          <span>PRO-BELONGING</span>
+        </div>
+      </div>
 
     </section>
 
 
     <!-- INTRO STRIP -->
-
     <section class="intro-strip">
-        <span>CONNECTION</span>
-        <span>✳</span>
-        <span>EXPERIENCE</span>
-        <span>✳</span>
-        <span>BELONGING</span>
-        <span>✳</span>
-        <span>ANTI-TRAUMA</span>
-        <span>✳</span>
-        <span>GOOD V!BES</span>
+      <div>CONNECTION</div>
+      <span>✳</span>
+      <div>EXPERIENCE</div>
+      <span>✳</span>
+      <div>BELONGING</div>
+      <span>✳</span>
+      <div>ANTI-TRAUMA</div>
+      <span>✳</span>
+      <div>GOOD V!BES</div>
     </section>
 
 
-    <!-- WHY WE EXIST -->
-
+    <!-- BELIEF SECTION -->
     <section class="belief-section section-padding">
 
-        <div class="belief-intro">
-            <p class="eyebrow">01 — WHY WE EXIST</p>
+      <div class="belief-intro">
+        <p class="eyebrow">02 — WHAT WE BELIEVE</p>
 
-            <h2>
-                Life is heavy enough.<br>
-                <em>Let's not carry it alone.</em>
-            </h2>
-        </div>
+        <h2>
+          Sometimes you don't need<br>
+          another lecture.<br>
+          You just need <em>people.</em>
+        </h2>
+      </div>
 
-        <div class="belief-content">
-
-            <p class="large-copy">
-                Loss, disappointment, stress, loneliness and the weight
-                of everyday life can leave people feeling disconnected.
-            </p>
-
-            <p>
-                We Social Club exists to make human connection easier.
-                We bring people together through conversations, shared
-                experiences and genuine friendships.
-            </p>
-
-            <p>
-                We are not here to pretend life is perfect. We are here
-                to remind one another that there is still room for joy,
-                friendship and belonging.
-            </p>
-
-            <a href="about.html" class="button button-outline">
-                OUR STORY <span>↗</span>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- BIRTHDAY VIDEO: SECOND VIDEO -->
-
-    <section class="events-section section-padding">
-
-        <div class="section-heading">
-
-            <div>
-                <p class="eyebrow">02 — CELEBRATING LIFE</p>
-
-                <h2>
-                    Every moment<br>
-                    deserves to be <em>celebrated.</em>
-                </h2>
-            </div>
-
-            <a href="experiences.html" class="text-link">
-                Explore our experiences ↗
-            </a>
-
-        </div>
-
-
-        <div class="feature-video">
-
-            <video class="loop-video" autoplay muted loop playsinline preload="metadata">
-                <source src="assets/videos/birthday.mp4" type="video/mp4">
-            </video>
-
-            <div class="video-placeholder">
-                <span>CELEBRATING ONE ANOTHER</span>
-            </div>
-
-            <div class="video-overlay">
-                <span class="video-label">WE SOCIAL CLUB / SHARED MOMENTS</span>
-
-                <div>
-                    <p>
-                        Your day.<br>
-                        Our celebration.
-                    </p>
-
-                    <span>GOOD PEOPLE. GREAT EXPERIENCES.</span>
-                </div>
-            </div>
-
-            <button class="sound-toggle" type="button">
-                SOUND OFF
-            </button>
-
-        </div>
-
-        <p class="video-caption">
-            Because belonging is also about having people to celebrate with.
+      <div class="belief-content">
+        <p class="large-copy">
+          We believe in the kind of connection that reminds you that
+          you are not alone. The kind that gives you room to talk,
+          laugh, listen, heal, recharge and simply be yourself.
         </p>
 
+        <p>
+          Life can get heavy. Loss, disappointment, pressure and
+          loneliness can make even ordinary days difficult. We created
+          a space where people can meet without having to pretend
+          everything is fine.
+        </p>
+
+        <a href="about.html" class="button button-outline">
+          OUR STORY <span>↗</span>
+        </a>
+      </div>
+
     </section>
 
 
-    <!-- SINGING VIDEO -->
+    <!-- BIRTHDAY / EVENTS VIDEO -->
+    <section class="events-section section-padding">
 
-    <section class="movie-section">
-
-        <div class="movie-image">
-
-            <video class="loop-video" autoplay muted loop playsinline preload="metadata">
-                <source src="assets/videos/bbutter.mp4" type="video/mp4">
-            </video>
-
-            <div class="video-placeholder">
-                <span>GOOD PEOPLE. GOOD MUSIC. GOOD V!BES.</span>
-            </div>
-
-            <button class="sound-toggle" type="button">
-                SOUND OFF
-            </button>
-
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 — LIFE HAPPENS HERE</p>
+          <h2>Make room for <em>moments.</em></h2>
         </div>
 
-        <div class="movie-copy">
+        <p>
+          The spontaneous celebrations. The unexpected friendships.
+          The memories that stay with you long after the day is over.
+        </p>
+      </div>
 
-            <p class="eyebrow">03 — THE JOY OF BEING TOGETHER</p>
+      <div class="feature-video">
 
-            <h2>
-                Sometimes happiness sounds like <em>everyone singing.</em>
-            </h2>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="assets/videos/birthday.mp4" type="video/mp4">
+        </video>
 
-            <p>
-                Not every meaningful moment needs a plan.
-                Sometimes it is just people being themselves,
-                sharing a song and enjoying the moment.
-            </p>
-
-            <a href="experiences.html" class="button button-dark">
-                SEE OUR EXPERIENCES <span>↗</span>
-            </a>
-
+        <div class="video-placeholder">
+          <span class="placeholder-mark">03 / CELEBRATE</span>
+          <p>GOOD PEOPLE MAKE GREAT MEMORIES.</p>
         </div>
+
+        <div class="feature-video-overlay">
+          <span>THE LITTLE THINGS ARE THE BIG THINGS.</span>
+          <h3>Every moment<br>deserves a little life.</h3>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </div>
+
+    </section>
+
+
+    <!-- SINGING / LIFE SECTION -->
+    <section class="movie-section section-padding">
+
+      <div class="movie-image">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="assets/videos/bbutter.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">04 / TOGETHER</span>
+          <p>THERE IS SOMETHING ABOUT BEING TOGETHER.</p>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </div>
+
+      <div class="movie-copy">
+        <p class="eyebrow">NOT JUST ANOTHER WEEKEND</p>
+
+        <h2>
+          Some things<br>
+          are better<br>
+          <em>experienced.</em>
+        </h2>
+
+        <p>
+          The singing that gets louder, the laughter that comes out
+          of nowhere, the conversations that go on longer than
+          expected. These are the things we make room for.
+        </p>
+
+        <a href="experiences.html" class="text-link">
+          EXPLORE OUR EXPERIENCES <span>→</span>
+        </a>
+      </div>
 
     </section>
 
 
     <!-- FLASHLIGHT VIDEO -->
-
     <section class="events-section section-padding">
 
-        <div class="section-heading">
-
-            <div>
-                <p class="eyebrow">04 — THIS IS WHO WE ARE</p>
-
-                <h2>
-                    Many lights.<br>
-                    <em>One community.</em>
-                </h2>
-            </div>
-
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">05 — MORE THAN A NAME</p>
+          <h2>We are the <em>people.</em></h2>
         </div>
-
-        <div class="feature-video torch-video">
-
-            <video class="loop-video" autoplay muted loop playsinline preload="metadata">
-                <source src="assets/videos/torch.mp4" type="video/mp4">
-            </video>
-
-            <div class="video-placeholder">
-                <span>WE SOCIAL CLUB</span>
-            </div>
-
-            <div class="video-overlay">
-                <span class="video-label">WE|S.CLUB — OUR IDENTITY</span>
-
-                <div>
-                    <p>
-                        Different people.<br>
-                        <em>One place to belong.</em>
-                    </p>
-
-                    <span>WE ARE WE SOCIAL CLUB.</span>
-                </div>
-            </div>
-
-            <button class="sound-toggle" type="button">
-                SOUND OFF
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- COMMUNITY CARDS -->
-
-    <section class="community-section section-padding">
-
-        <div class="section-heading">
-
-            <div>
-                <p class="eyebrow">05 — WHAT YOU'LL FIND HERE</p>
-
-                <h2>
-                    Room for <em>real life.</em>
-                </h2>
-            </div>
-
-            <p class="heading-side-copy">
-                No pressure to be perfect.<br>
-                No need to have it all figured out.
-            </p>
-
-        </div>
-
-
-        <div class="community-grid">
-
-            <a href="community.html" class="community-card card-dark">
-
-                <span class="card-number">01 / CONNECTION</span>
-
-                <div class="card-icon">↗</div>
-
-                <div>
-                    <h3>People<br>who get it.</h3>
-
-                    <p>
-                        Real conversations and the comfort of being
-                        among people who care.
-                    </p>
-                </div>
-
-                <span class="card-footer">DISCOVER OUR COMMUNITY →</span>
-
-            </a>
-
-
-            <a href="experiences.html" class="community-card card-image">
-
-                <video class="loop-video" autoplay muted loop playsinline preload="metadata">
-                    <source src="assets/videos/vlog.mp4" type="video/mp4">
-                </video>
-
-                <div class="card-image-shade"></div>
-
-                <span class="card-number">02 / EXPERIENCES</span>
-
-                <div class="card-card-copy">
-                    <h3>Life beyond<br>the routine.</h3>
-
-                    <p>
-                        Games, gatherings, activities and memories
-                        worth keeping.
-                    </p>
-                </div>
-
-                <span class="card-footer">SEE WHAT WE DO →</span>
-
-                <button class="sound-toggle" type="button">SOUND OFF</button>
-
-            </a>
-
-
-            <a href="about.html" class="community-card card-paper">
-
-                <span class="card-number">03 / OUR PURPOSE</span>
-
-                <div class="card-icon">✳</div>
-
-                <div>
-                    <h3>An anti-trauma<br>community.</h3>
-
-                    <p>
-                        A space that values connection, emotional
-                        wellbeing and the power of showing up.
-                    </p>
-                </div>
-
-                <span class="card-footer">UNDERSTAND OUR WHY →</span>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- WEEKLY MEETINGS -->
-
-    <section class="weekly-section section-padding">
-
-        <div class="weekly-left">
-
-            <p class="eyebrow">06 — COME AS YOU ARE</p>
-
-            <h2>
-                There's a place<br>
-                for you <em>here.</em>
-            </h2>
-
-        </div>
-
-
-        <div class="weekly-right">
-
-            <div class="weekly-day">SUNDAY</div>
-
-            <div class="weekly-time">
-                3:30 PM
-                <span>UNTIL WE'RE TIRED</span>
-            </div>
-
-            <p>
-                We make time to meet, connect, share experiences
-                and simply enjoy being around good people.
-            </p>
-
-            <a href="join.html" class="button button-red">
-                BE PART OF IT <span>↗</span>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FINAL INVITATION -->
-
-    <section class="final-cta section-padding">
-
-        <div class="cta-top">
-            <p class="eyebrow">WE|S.CLUB — MBALE, UGANDA</p>
-            <span>GOOD PEOPLE. GREAT EXPERIENCES.</span>
-        </div>
-
-        <h2>
-            You don't have to<br>
-            do life <em>alone.</em>
-        </h2>
-
-        <div class="cta-bottom">
-
-            <p>
-                Come for the experiences.<br>
-                Stay for the people.
-            </p>
-
-            <a href="join.html" class="button button-light">
-                JOIN THE COMMUNITY <span>↗</span>
-            </a>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="footer-brand">
-
-        <img src="assets/logo.png" alt="WE Social Club">
 
         <p>
-            Good people. Great experiences.<br>
-            Genuine belonging.
+          Different stories. Different journeys. One place where
+          everyone has room to belong.
+        </p>
+      </div>
+
+      <div class="feature-video torch-video">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="assets/videos/torch.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-placeholder">
+          <span class="placeholder-mark">WE SOCIAL CLUB</span>
+          <p>ONE COMMUNITY. MANY STORIES.</p>
+        </div>
+
+        <div class="feature-video-overlay">
+          <span>WE ARE BETTER TOGETHER.</span>
+          <h3>Different lights.<br>One shared space.</h3>
+        </div>
+
+        <button class="sound-toggle" type="button">SOUND OFF</button>
+      </div>
+
+    </section>
+
+
+    <!-- COMMUNITY SECTION -->
+    <section class="community-section section-padding">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">06 — THE WE IN WE SOCIAL CLUB</p>
+          <h2>There is room <em>for you.</em></h2>
+        </div>
+
+        <p>
+          You don't have to arrive with a perfect story.
+          You don't have to know anybody. Just come as you are.
+        </p>
+      </div>
+
+      <div class="community-grid">
+
+        <article class="community-card card-dark">
+          <span class="card-number">01 / CONNECTION</span>
+
+          <div class="card-card-copy">
+            <h3>People who<br>make space<br>for people.</h3>
+
+            <p>
+              Conversations without judgement. Listening without
+              pretending. Friendship without having to earn a place.
+            </p>
+
+            <a href="community.html" class="card-link">
+              OUR COMMUNITY ↗
+            </a>
+          </div>
+        </article>
+
+
+        <article class="community-card card-image">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source src="assets/videos/vlog.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-placeholder">
+            <span class="placeholder-mark">07 / PLAY</span>
+            <p>LET YOURSELF HAVE FUN.</p>
+          </div>
+
+          <div class="card-image-shade"></div>
+
+          <div class="card-card-copy">
+            <span class="card-number">02 / EXPERIENCES</span>
+            <h3>Less scrolling.<br>More living.</h3>
+
+            <a href="experiences.html" class="card-link">
+              SEE WHAT WE DO ↗
+            </a>
+          </div>
+
+          <button class="sound-toggle" type="button">SOUND OFF</button>
+        </article>
+
+
+        <article class="community-card card-paper">
+          <span class="card-number">03 / BELONGING</span>
+
+          <div class="card-card-copy">
+            <h3>You don't<br>have to do<br>life alone.</h3>
+
+            <p>
+              Sometimes the best support comes from people who
+              understand what it means to simply show up.
+            </p>
+
+            <a href="join.html" class="card-link">
+              FIND YOUR PEOPLE ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- WEEKLY MEETUP -->
+    <section class="weekly-section section-padding">
+
+      <div class="weekly-left">
+        <p class="eyebrow">07 — SAME PEOPLE, NEW STORIES</p>
+
+        <h2>
+          Sundays are<br>
+          for <em>us.</em>
+        </h2>
+
+        <p>
+          No complicated plans. No pressure to impress.
+          Just people coming together to reconnect, unwind
+          and enjoy being around one another.
         </p>
 
-    </div>
+        <a href="join.html" class="button button-dark">
+          COME THROUGH <span>↗</span>
+        </a>
+      </div>
 
-
-    <div class="footer-links">
-
-        <div>
-            <span>EXPLORE</span>
-            <a href="about.html">Our Story</a>
-            <a href="community.html">Community</a>
-            <a href="experiences.html">Experiences</a>
-            <a href="gallery.html">Gallery</a>
+      <div class="weekly-right">
+        <div class="weekly-detail">
+          <span>WHEN</span>
+          <strong>SUNDAYS</strong>
         </div>
 
-        <div>
-            <span>GET INVOLVED</span>
-            <a href="join.html">Become a Member</a>
-            <a href="join.html">Support the Community</a>
+        <div class="weekly-detail">
+          <span>TIME</span>
+          <strong>3:30 PM</strong>
         </div>
 
-    </div>
+        <div class="weekly-detail">
+          <span>UNTIL</span>
+          <strong>WE'RE TIRED.</strong>
+        </div>
+
+        <div class="weekly-note">
+          <span>THE PLAN IS SIMPLE.</span>
+          <p>
+            Show up. Meet someone. Share a story.
+            Laugh a little. Leave a little lighter.
+          </p>
+        </div>
+      </div>
+
+    </section>
 
 
-    <div class="footer-bottom">
+    <!-- FINAL CALL TO ACTION -->
+    <section class="final-cta section-padding">
 
-        <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+      <p class="eyebrow">08 — YOUR PEOPLE ARE OUT THERE</p>
 
-        <span>MADE WITH PEOPLE IN MIND.</span>
+      <h2>
+        You have a place<br>
+        <em>here.</em>
+      </h2>
 
-        <a href="https://wesocialcommunity.github.io/">
-            WESOCIALCOMMUNITY.GITHUB.IO ↗
+      <p>
+        Come for the experiences. Stay for the people.
+        Be part of something genuine.
+      </p>
+
+      <a href="join.html" class="button button-light">
+        JOIN WE SOCIAL CLUB <span>↗</span>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="WE SOCIAL CLUB">
         </a>
 
+        <p>
+          Good people. Great experiences.<br>
+          Genuine belonging.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <span>EXPLORE</span>
+          <a href="about.html">Our Story</a>
+          <a href="community.html">Community</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div>
+          <span>GET INVOLVED</span>
+          <a href="join.html">Join the Club</a>
+          <a href="join.html">Get in Touch</a>
+        </div>
+      </div>
+
     </div>
 
-</footer>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+      <span>MADE FOR PEOPLE. BY PEOPLE.</span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
 
-
-<script src="script.js"></script>
+  </footer>
 
 </body>
 </html>
