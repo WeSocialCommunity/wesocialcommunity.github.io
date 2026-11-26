@@ -3,147 +3,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the games, music, conversations and shared experiences at WE Social Club.">
-  <title>Experiences | WE SOCIAL CLUB</title>
+
+  <title>Experiences — WE SOCIAL CLUB</title>
+  <meta name="description" content="Discover the experiences, activities and shared moments that bring We Social Club together.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
+<div class="grain-overlay"></div>
+
 <header class="site-header">
-  <a href="index.html" class="brand">
-    <img src="assets/logo.png" alt="WE Social Club logo">
+  <a href="index.html" class="brand" aria-label="We Social Club homepage">
+    <img src="assets/logo.png" alt="WE SOCIAL CLUB">
   </a>
 
-  <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">Our Story</a>
     <a href="community.html">Community</a>
     <a href="experiences.html" class="active">Experiences</a>
     <a href="gallery.html">Gallery</a>
-    <a href="join.html" class="nav-join">Join Us</a>
+    <a href="join.html" class="nav-join">Join Us <span>↗</span></a>
   </nav>
 </header>
 
+
 <main>
 
-<section class="page-hero">
-  <p class="eyebrow">LIFE HAPPENS HERE</p>
-  <h1>LESS SCROLLING. MORE LIVING.</h1>
-  <p>
-    The conversations, games, music, laughter and unexpected
-    friendships that turn an ordinary Sunday into a memory.
-  </p>
-</section>
+  <!-- INTRO -->
+  <section class="page-hero section-padding">
 
-<section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">WHAT WE GET UP TO</p>
-    <h2>We don't just meet. We experience.</h2>
+    <p class="eyebrow">01 — LIFE IS MEANT TO BE EXPERIENCED</p>
+
+    <h1>
+      Less watching<br>
+      life happen.<br>
+      More <em>living it.</em>
+    </h1>
+
     <p>
-      Every gathering is an opportunity to connect, try something
-      different and create memories with people who make life lighter.
+      We create opportunities to step away from the everyday,
+      meet people, try something different and make memories
+      worth keeping.
     </p>
-  </div>
 
-  <div class="experience-grid">
+  </section>
 
-    <article class="experience-card">
-      <div class="experience-image">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/vlog.mp4" type="video/mp4">
-        </video>
-        <button class="sound-toggle" type="button">Sound on</button>
-      </div>
-      <div class="experience-copy">
-        <p class="eyebrow">01 / PLAY</p>
-        <h3>Games & friendly competition</h3>
-        <p>
-          A little competition, a lot of laughter and the kind of
-          moments that bring strangers closer.
-        </p>
-      </div>
-    </article>
 
-    <article class="experience-card">
-      <div class="experience-image">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/life.mp4" type="video/mp4">
-        </video>
-        <button class="sound-toggle" type="button">Sound on</button>
-      </div>
-      <div class="experience-copy">
-        <p class="eyebrow">02 / MUSIC</p>
-        <h3>Music & expression</h3>
-        <p>
-          Singing together, sharing energy and letting the moment
-          take us somewhere beyond the ordinary.
-        </p>
-      </div>
-    </article>
+  <!-- EXPERIENCE 01 -->
+  <section class="experience-section section-padding">
 
-    <article class="experience-card">
-      <div class="experience-image">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/sit.mp4" type="video/mp4">
-        </video>
-        <button class="sound-toggle" type="button">Sound on</button>
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">02 — PLAY, LAUGH, CONNECT</p>
+        <h2>Bring on the <em>good times.</em></h2>
       </div>
-      <div class="experience-copy">
-        <p class="eyebrow">03 / CONVERSATION</p>
-        <h3>Real conversations</h3>
-        <p>
-          Sometimes the most meaningful experience is sitting
-          together and genuinely listening to one another.
-        </p>
+
+      <p>
+        The games, the friendly competition, the unexpected
+        victories and the laughter in between.
+      </p>
+    </div>
+
+    <div class="experience-card">
+
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/vlog.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">01 / PLAY</span>
+        <p>GOOD V!BES. GREAT MEMORIES.</p>
       </div>
-    </article>
 
-    <article class="experience-card">
-      <div class="experience-image">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/torch.mp4" type="video/mp4">
-        </video>
-        <button class="sound-toggle" type="button">Sound on</button>
+      <div class="experience-overlay">
+        <span>EXPERIENCE 01</span>
+        <h3>Play without<br>holding back.</h3>
       </div>
-      <div class="experience-copy">
-        <p class="eyebrow">04 / IDENTITY</p>
-        <h3>Moments that define us</h3>
-        <p>
-          The spontaneous, unforgettable moments that remind us
-          what it means to be part of something.
-        </p>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE 02 -->
+  <section class="experience-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">03 — MUSIC & TOGETHERNESS</p>
+        <h2>Find your <em>voice.</em></h2>
       </div>
-    </article>
 
-  </div>
-</section>
+      <p>
+        Sometimes you don't need to sing well. You just need
+        to sing like nobody is judging you.
+      </p>
+    </div>
 
-<section class="content-section dark-section">
-  <p class="eyebrow">THE SUNDAY TRADITION</p>
-  <h2>One Sunday can change the shape of your week.</h2>
-  <p>
-    We meet, share experiences and recharge together.
-    No pressure to impress. No requirement to have everything
-    figured out. Just good people and genuine connection.
-  </p>
-  <h3>SUNDAYS · 3:30 PM UNTIL WE'RE TIRED</h3>
-</section>
+    <div class="experience-card">
 
-<section class="closing-section">
-  <h2>Come make a memory with us.</h2>
-  <a href="join.html" class="button button-dark">JOIN THE COMMUNITY</a>
-</section>
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/life.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">02 / MUSIC</span>
+        <p>LET THE MUSIC TAKE OVER.</p>
+      </div>
+
+      <div class="experience-overlay">
+        <span>EXPERIENCE 02</span>
+        <h3>Sing it like<br>you mean it.</h3>
+      </div>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE 03 -->
+  <section class="experience-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">04 — CONVERSATION</p>
+        <h2>Make space for <em>stories.</em></h2>
+      </div>
+
+      <p>
+        No rush. No pressure. Just people sharing thoughts,
+        listening and learning from one another.
+      </p>
+    </div>
+
+    <div class="experience-card">
+
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/sit.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">03 / CONVERSATION</span>
+        <p>EVERY STORY DESERVES ROOM.</p>
+      </div>
+
+      <div class="experience-overlay">
+        <span>EXPERIENCE 03</span>
+        <h3>Pull up a seat.<br>Let's talk.</h3>
+      </div>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE 04 -->
+  <section class="experience-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">05 — SHARED MOMENTS</p>
+        <h2>Make memories <em>together.</em></h2>
+      </div>
+
+      <p>
+        Celebrations don't have to be grand to mean something.
+        Sometimes the people make the moment.
+      </p>
+    </div>
+
+    <div class="experience-card">
+
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/bbirthday.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">04 / CELEBRATE</span>
+        <p>MAKE THE MOMENT COUNT.</p>
+      </div>
+
+      <div class="experience-overlay">
+        <span>EXPERIENCE 04</span>
+        <h3>Celebrate<br>being together.</h3>
+      </div>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE 05 -->
+  <section class="experience-section section-padding">
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">06 — OUTDOOR EXPERIENCES</p>
+        <h2>Light up the <em>night.</em></h2>
+      </div>
+
+      <p>
+        There is something special about creating a moment
+        together and seeing everyone become part of it.
+      </p>
+    </div>
+
+    <div class="experience-card">
+
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/torch.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-placeholder">
+        <span class="placeholder-mark">05 / TOGETHER</span>
+        <p>ONE COMMUNITY. MANY LIGHTS.</p>
+      </div>
+
+      <div class="experience-overlay">
+        <span>EXPERIENCE 05</span>
+        <h3>Make something<br>unforgettable.</h3>
+      </div>
+
+      <button class="sound-toggle" type="button">SOUND OFF</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLOSING -->
+  <section class="closing-section section-padding">
+
+    <p class="eyebrow">07 — THERE'S ALWAYS SOMETHING HAPPENING</p>
+
+    <h2>
+      Don't just hear<br>
+      about it. <em>Be there.</em>
+    </h2>
+
+    <p>
+      Come meet the people, take part in the experiences
+      and make a few stories of your own.
+    </p>
+
+    <a href="join.html" class="button button-dark">
+      JOIN THE NEXT EXPERIENCE <span>↗</span>
+    </a>
+
+  </section>
 
 </main>
 
+
 <footer class="site-footer">
-  <img src="assets/logo.png" alt="WE Social Club logo">
-  <p>Good people. Great experiences. Genuine belonging & v!bes.</p>
-  <p>© <span class="current-year"></span> WE SOCIAL CLUB</p>
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="WE SOCIAL CLUB">
+      </a>
+
+      <p>
+        Good people. Great experiences.<br>
+        Genuine belonging &amp; v!bes.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <div>
+        <span>EXPLORE</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="community.html">Community</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div>
+        <span>GET INVOLVED</span>
+        <a href="join.html">Join the Club</a>
+        <a href="join.html">Get in Touch</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> WE SOCIAL CLUB</span>
+    <span>MADE FOR PEOPLE. BY PEOPLE.</span>
+    <a href="index.html">BACK HOME ↑</a>
+  </div>
+
 </footer>
 
 </body>
