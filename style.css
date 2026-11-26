@@ -1238,3 +1238,62 @@ h1 em,h2 em {
         scroll-behavior:auto!important;
     }
 }
+/* PAGE TRANSITION */
+
+body {
+    opacity: 1;
+    transition: opacity .18s ease;
+}
+
+body.page-leaving {
+    opacity: 0;
+}
+
+body.page-ready {
+    opacity: 1;
+}
+
+/* IMAGE VIEWER */
+
+.image-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(15,13,12,.96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    animation: viewerIn .2s ease;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.image-viewer p {
+    color: var(--paper);
+    margin-top: 15px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@keyframes viewerIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
